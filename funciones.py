@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import LinearSVC
 
 
 #Ingresar txt a dataset
@@ -122,8 +123,12 @@ def naive_bayes(X_traincv, clases):
     mnb.fit(X_traincv, clases)
     return mnb
 
+#Decision Tree Classifier
 def decision_tree(X_traincv, clases):
     tree = DecisionTreeClassifier(random_state=0)
     tree.fit(X_traincv, clases)
     return tree
 
+def prediccion(modelo,noticia):
+    pred = modelo.predict(noticia)
+    return pred

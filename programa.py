@@ -1,4 +1,4 @@
-from funciones import ingresar_noticias, texto_procesado, crea_clases, tfid, naive_bayes, decision_tree, string_doc
+from funciones import ingresar_noticias, texto_procesado, crea_clases, tfid, naive_bayes, decision_tree, string_doc, prediccion
 
 #Noticias
 noticias = []
@@ -23,10 +23,12 @@ naive = naive_bayes(X_traincv, clases)
 tree = decision_tree(X_traincv, clases)
 
 #Prediccion
-pred_tree = tree.predict(X_traincv[0])
-pred_naive = naive.predict(X_traincv[0])
-texto = string_doc(0, noticias)
-print("La noticia:\n", texto)
+pred_tree = prediccion(tree, X_traincv[400])
+pred_naive = prediccion(naive, X_traincv[400])
+
+noticia = string_doc(400, noticias)
+
+print("La noticia:\n", noticia)
 print("\n según Decision Tree es de ", pred_tree)
 print("\n según Naive Bayes es de ", pred_naive)
 
