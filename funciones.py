@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.svm import LinearSVC
+from sklearn.ensemble import RandomForestClassifier
 
 
 #Ingresar txt a dataset
@@ -128,6 +128,12 @@ def decision_tree(X_traincv, clases):
     tree = DecisionTreeClassifier(random_state=0)
     tree.fit(X_traincv, clases)
     return tree
+
+#RandomForest
+def ramdonforest(X_traincv, clases):
+    random_forest = RandomForestClassifier(random_state=0)
+    random_forest.fit(X_traincv, clases)
+    return random_forest
 
 def prediccion(modelo,noticia):
     pred = modelo.predict(noticia)
