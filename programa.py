@@ -21,7 +21,7 @@ naive = naive_bayes(X_traincv, clases)
 
 #Decision Tree
 tree = decision_tree(X_traincv, clases)
-
+#Prediccion
 pred = tree.predict(X_traincv)
 print(pred)
 
