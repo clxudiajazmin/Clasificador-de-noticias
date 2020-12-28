@@ -1,6 +1,6 @@
 # Clasificador-de-noticias
 
-_Programa en Python que permite clasificar noticias con las librerías NLTK y Sklearn
+_Programa en Python que permite clasificar noticias con las librerías NLTK y Sklearn_
 
 programa.py : En este se ejecuta el programa para clasificar las noticias
 
