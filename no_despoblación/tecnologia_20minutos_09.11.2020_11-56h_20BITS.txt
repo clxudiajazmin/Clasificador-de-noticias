@@ -1,0 +1,25 @@
+Face Mask Detection: la solución basada en inteligencia artificial que te avisa si alguien no lleva mascarilla en un edificio
+
+######
+
+"El sistema puede implementarse en todo tipo de espacios cerrados -también en comercios y tiendas- y el objetivo es ""mantener entornos seguros para los empleados y visitantes""."
+
+######
+
+Las autoridades sanitarias recomiendan utilizar mascarillas como medida efectiva para hacer frente a la expansión del coronavirus. En España, además de recomendable, su uso es obligatorio para las personas mayores de seis años, tanto en espacios cerrados como en la calle, cuando no se pueda mantener la distancia de seguridad interpersonal -1,5 metros-. En los medios de transporte se debe llevar siempre, independientemente del distanciamiento social.Son muchas las soluciones que se han ido implementando para que se cumplan las medidas de seguridad establecidas, desde pulseras que te avisan si alguien rompe la distancia recomendada hasta mascarillas de lo más tecnológico, pasando por sistemas con tecnología termográfica, por ejemplo.La inteligencia artificial también está jugando un papel clave, y desde el inicio de la pandemia han aparecido propuestas tecnológicas que la utilizaban, tanto para detectar síntomas de COVID-19 como para mantener la citada distancia de seguridad interpersonal. Ahora también la han usado para que nos sirva de ‘espía’ y pueda avisar si alguien no lleva puesta la mascarilla.La multinacional americana Johnson Controls ha desarrollado una herramienta basada en IA para los edificios, comercios, tiendas y locales que ayudará a sus propietarios “a mantener entornos seguros para los empleados y visitantes”. Face Mask Detection utiliza las cámaras existentes para identificar si las personas se distancian socialmente y usan mascarillas.Face Mask Detection genera una notificación automatizada “para concienciar del uso de mascarillas” y ofrece “un tiempo de respuesta más rápido” cuando se detecta una persona sin mascarilla, lo que facilita que las empresas “sean proactivas” para reducir el riesgo de transmisión del coronavirus.La solución está impulsada por la plataforma de vídeo exacqVision 20.09, que está basada en análisis de IA en lugar de análisis basado en píxeles, ofreciendo así una precisión mejorada y “una solución escalable”.“Utilizando análisis de vídeo impulsados por IA, nuestra solución de detección de mascarillasaprovecha las cámaras existentes para identificar si los ocupantes del edificio están respetando las pautas de salud actuales”, dice Roland Billeter, vicepresidente y director general de Johnson Controls Building Technologies & Solutions en Europa.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología.
+
+######
+
+09.11.2020
+
+######
+
+20BITS
+
+######
+
+Inteligencia artificial,Síntomas,Coronavirus,Mascarillas,Mascarillas coronavirus,Noticias de tecnología,Covid-19,Coronavirus en España,Virus respiratorios,Estado de alarma por coronavirus,Tech,
+
+######
+
+https://www.20minutos.es/noticia/4466912/0/face-mask-detection-la-solucion-basada-en-inteligencia-artificial-que-te-avisa-si-alguien-no-lleva-mascarilla-en-un-edificio/

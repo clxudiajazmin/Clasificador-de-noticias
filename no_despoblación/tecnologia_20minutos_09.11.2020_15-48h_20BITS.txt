@@ -1,0 +1,25 @@
+Internxt Drive: así es la nube 'made in Spain' que quiere hacer sombra a Dropbox o Google Drive
+
+######
+
+Creada en 2019 por el emprendedor de 23 años Fran Villalba, esta nube segura que encripta los documentos cuenta con más de 12.000 clientes.
+
+######
+
+Con cifrado de extremo a extremo, descentralizada, gratuita y de código abierto, esas son las cartas de presentación de Internxt Drive, la nube española que busca competir con gigantes como Dropbox o Google Drive.Internxt Drive es el producto de una joven mente brillante al más puro estilo Elon Musk, aunque posiblemente sin toda la excentricidad que rodea al empresario dueño de Tesla o SpaceX. Fran Villalba, nacido en 1997, empezó a crear empresas tecnológicas con tan solo 13 años y hoy, con 23, ya es una de las jóvenes promesas en el mundo de la tecnología cloud.Villalba forma parte de la lista ‘T500’ de The Next Web, una lista que recoge a los 500 jóvenes más influyentes en el ámbito tecnológico, y fue nominado para el Forbes 30 Under 30 Europe 2018. Su nube encriptada para proteger los documentos quiere jugar entre los más grandes, y ya la están utilizando más de 12.000 personas, aunque espera “cerrar 2020 con unos 20.000 usuarios activos”.La principal diferencia entre Internxt Drive con los archiconocidos Google Drive o Dropbox es que fragmenta los archivos y estos se encriptan en los dispositivos, de forma que únicamente cada usuario tiene acceso a los mismos. Además, no guarda su clave de desencriptación, a diferencia de otras empresas. La compañía cuenta con una red de proveedores alrededor de todo el mundo, la cual almacenan fragmentos encriptados de los archivos.Para entenderlo rápido: los archivos que subes a esta nube se cifran de extremo a extremo, se fragmentan y luego se distribuyen entre diferentes máquinas de todo el mundo, de manera que los servidores en los que están tus datos contienen solo fragmentos cifrados, nunca archivos completos. Y solo tú tienes la clave de descifrado y puedes recuperar los fragmentos.“Internxt Drive, un servicio de almacenamiento de archivos de conocimiento cero que se basa en la privacidad absoluta y la seguridad sin concesiones, se diseñó desde adentro hacia afuera. Es una nube creada para que puedas almacenar de forma segura todas tus posesiones digitales”, explican desde la propia compañía.Ofrece al usuario un espacio online seguro donde poder almacenar información “al estilo Dropbox”, pero centrado “en el respeto tanto al usuario como a nuestro planeta”, dice su creador. “Nuestro producto es la primera nube de la que realmente te puedes fiar. Un espacio de almacenamiento online diferente”, asegura.Todos los usuarios reciben un plan de almacenamiento gratuito de 2 GB, que puede actualizarse a modelos de pago bastante económicos: 20 GB por 0,89 €; 200 GB por 3,49 €; o 2 TB por 8,99 €. Además, si te haces premium, por cada año que estés suscrito se plantará un árbol para luchar contra el problema de la deforestación a nivel mundial.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología.
+
+######
+
+09.11.2020
+
+######
+
+20BITS
+
+######
+
+Internet,Startups,Emprendedores,Google Drive,Servidores,Noticias de tecnología,tagfree,Tech,
+
+######
+
+https://www.20minutos.es/noticia/4467358/0/internxt-drive-asi-es-la-nube-made-in-spain-que-quiere-hacer-sombra-a-dropbox-o-google-drive/

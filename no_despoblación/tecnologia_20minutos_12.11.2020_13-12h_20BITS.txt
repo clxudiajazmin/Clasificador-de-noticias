@@ -1,0 +1,25 @@
+Alternativas de almacenamiento en la nube tras la limitación de Google Fotos
+
+######
+
+Existen opciones conocidas como Dropbox, aunque también hay otras como Internxt Drive, que además es española.&nbsp;
+
+######
+
+"Tras el anuncio de Google de que dejará de ofrecer de manera ilimitada en su versión gratuita el almacenamiento de tu contenido multimedia en su servicio Fotos, muchos se han echado las manos a la cabeza pensando dónde podrán guardar ahora todas las imágenes de sus teléfonos.En primer lugar, calma: tienes hasta el 1 de junio de 2021, tiempo durante el cual seguirás disfrutando de almacenamiento sin límites y gratis en Google Fotos. Además, todo lo que hayas subido antes de esa fecha no contará dentro de los 15 GB que ofrece Google en su modelo sin pago. Eso sí, recuerda que dentro de esos gigas entran también los archivos que tienes en Drive y todo tu Gmail.En segundo lugar, deberíamos también utilizar esto para reflexionar un poco acerca de los miles de millones de fotografías que hacemos, a veces simplemente por el hecho de que ""como son digitales pueden ser infinitas"". ¿Cuántas de esas imágenes vas a volver a ver en realidad? ¿Cuántas se quedarán para siempre almacenadas en una carpeta que no volverás a abrir?Por último, para que no cunda el pánico, te dejamos un listado de alternativas de almacenamiento en la nube para que tengas otras opciones&nbsp;donde guardar tus archivos ahora que Google Fotos ya no es ilimitado.Dropbox es un servicio de alojamiento de archivos multiplataforma en la nube que opera desde 2008. Como en casi todo este tipo de servicios, la plataforma está diseñada tanto para particulares como para equipos de trabajo.&nbsp;Si lo usas de manera personal, tienes un plan 'Basic' que es gratis y que incluye&nbsp;2 GB de almacenamiento, aunque hay usuarios que han logrado más espacio a lo largo de los años invitando a otros -yo por ejemplo tengo algo más de 15 GB, recibes 500 MB por recomendación hasta un máximo 16 GB-.Puedes, también, contratar los planes de pago: el modelo 'Plus' te da hasta&nbsp;2.000 GB por 9,99 euros al mes y el 'Family' -16,99 euros- te ofrece la misma cantidad de espacio pero además pueden usarlo hasta seis usuarios.&nbsp;Amazon, por supuesto, también se ha apuntado a la nube. A ver si pensamos que Jeff Bezos es rico por intervención divina...&nbsp;Con tu suscripción Prime, dispones de almacenamiento ilimitado de fotos a resolución completa y&nbsp;5 GB de para tus vídeos en Amazon Photos.&nbsp;También puedes subir documentos.Hay, claro, opciones de pago: 100 GB por 1,99 euros al mes, 1.000 GB por&nbsp;9,99 euros al mes o 2.000 GB por&nbsp;19,99 euros al mes.Otro de los grandes.&nbsp;OneDrive es un servicio de alojamiento de archivos lanzado en 2014 que ofrece 5 GB de almacenamiento gratuito en su plan 'Basic'.&nbsp;Tiene también opciones de pago: por 2 euros al mes tienes&nbsp;100 GB; por&nbsp;69 euros al año -o 7 euros al mes- te incluyen 1.000 GB, Skype y aplicaciones de Office; y por 99 euros al año -o 10 euros al mes- tienes un plan familiar que lleva 6 TB -1.000 GB por persona-, Skype y aplicaciones de Office.Mega te ofrece 50 GB gratis de almacenamiento solo por registrarte a cambio de&nbsp;que participes en su programa de logros. Puedes usar el espacio para guardar&nbsp;documentos, fotografías, vídeos o lo que quieras.Hay un servicio de recomendación a otros usuarios que te permite aumentar el espacio en Mega gratis, pero es diferente a Dropbox:&nbsp;no consigues espacio o gigas extras por invitar a amigos, sino que la plataforma te da comisiones si se apuntan a los planes, y podrás usar el dinero para aumentar tu espacio.También hay planes de pago: Plan Lite por 4,99 euros al mes con 400 GB y 1 TB de transferencia; Plan Pro I por 9,99 euros al mes con 2 TB y 2 TB de transferencia; Plan Pro II por 19,99 euros al mes con 8 TB y 8 TB de transferencia; y&nbsp;Plan Pro III por 29,99 euros al mes con 16 TB y 16 TB de transferencia.Con cifrado de extremo a extremo, descentralizada, gratuita y de código abierto, esas son las cartas de presentación de Internxt Drive, la nube española.Los archivos que subes a esta nube se fragmentan y luego se distribuyen entre diferentes máquinas de todo el mundo, de manera que los servidores en los que están tus datos contienen solo fragmentos cifrados, nunca archivos completos. Y solo tú tienes la clave de descifrado y puedes recuperar los fragmentos.Todos los usuarios reciben un plan de almacenamiento gratuito de 2 GB, que puede actualizarse a modelos de pago bastante económicos: 20 GB por 0,89 euros; 200 GB por 3,49 euros; o 2 TB por 8,99 euros.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología."
+
+######
+
+12.11.2020
+
+######
+
+20BITS
+
+######
+
+Google,Internet,Redes sociales,Google Drive,Noticias de tecnología,tagfree,
+
+######
+
+https://www.20minutos.es/noticia/4471194/0/alternativas-de-almacenamiento-en-la-nube/

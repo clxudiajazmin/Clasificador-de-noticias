@@ -1,0 +1,25 @@
+Amazon patenta un método para agrupar a jugadores tóxicos y aislarlos del resto
+
+######
+
+Cuando detecte comportamientos extraños en algún usuario, lo llevará a otro servidor con más jugadores tóxicos. 
+
+######
+
+Detectar a los jugadores tóxicos, agruparlos en un mismo servidor y aislarlos del resto. Grosso modo, es lo que pretende Amazon con una patente que acaba de ser aprobada por la Oficina de Patentes de Estados Unidos –aunque se solicitó en diciembre de 2017–.Protocol ha desvelado la existencia de esta patente que, como se apunta en Europa Press, se llama ‘selección de jugadores basada en el comportamiento para juegos electrónicos multijugador’. Básicamente, es un sistema que analiza el comportamiento de cada gameronline y, si detecta toxicidad, lo manda al servidor de los jugadores tóxicos, con otros que son como él.La principal dificultad que encuentran en Amazon para llevar adelante este sistema es que la calificación de jugador tóxico engloba muchas variables. Dos jugadores pueden ser tratados como tal con comportamientos muy distintos. La herramienta de Amazon, señalan, analizará parte de estos comportamientos.Dentro de esa clasificación bastante genérica de jugador tóxico hay distintos tipos. Aquellos que son tóxicos porque no ayudan al equipo, son narcisistas y van siempre a lo suyo, ignorando las tácticas y los consejos grupales. También los hay que utilizan el juego para acosar, insultar o trolear.En una encuesta realizada por la Anti-Defamation League, que publicamos en 20 Minutos, se decía que el 74% de los jugadores online reconocía haber sufrido algún tipo de acoso. El 65% afirmaba haber sufrido acoso grave, que incluye amenazas físicas y acoso continuado. Otro 29% aseguraba que habían sufrido 'doxed': publicar información privada sobre otro jugador.Además, un tercio de los jugadores LGBTQ sentían que habían sido acosados por su orientación sexual. Un tercio de los negros o afroamericanos encuestados, y una cuarta parte de las personas latinoamericanas y asiáticas, se habían sentido acosadas por su origen étnico. Pero la peor parte, como casi siempre, se la llevaban las mujeres: casi el 40% de ellas aseguraban haber sido acosadas por motivos de género.Un estudio elaborado por la Fundación Anar –Ayuda a niños y adolescentes en riesgo– y la Fundación Mutua Madrileña, en 2015, señaló que el ciberbullying representaba ya uno de cada cuatro casos de acoso escolar. Esta proporción aumentaba con la edad, de forma que, a partir de los 13 años, el 36,5% de los casos de bullying –más de uno de cada tres– eran por ciberacoso.Otra conclusión llamativa es que el 70% de las víctimas de ciberbullying eran chicas. Dicho de otro modo, por cada varón que sufría ciberacoso existían 2,4 féminas en su misma situación. Este mayor porcentaje de víctimas chicas es un fenómeno que no coincide con las estadísticas del acoso escolar en general, donde el porcentaje de afectados por sexos está más equilibrado –47% mujeres frente a un 53% de varones–.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología.
+
+######
+
+05.11.2020
+
+######
+
+20BITS
+
+######
+
+Amazon,Internet,Gamer,Noticias de tecnología,tagfree,
+
+######
+
+https://www.20minutos.es/noticia/4444044/0/amazon-patenta-un-metodo-para-agrupar-a-jugadores-toxicos-y-aislarlos-del-resto/

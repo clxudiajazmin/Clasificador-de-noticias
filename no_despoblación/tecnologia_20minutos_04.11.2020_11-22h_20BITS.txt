@@ -1,0 +1,25 @@
+Crean una mascarilla que 'mata' al coronavirus con calor
+
+######
+
+La han diseñado ingenieros del MIT. Incluye una malla de cobre rodeada por neopreno y calentada con una pequeña batería, que ralentiza e inactiva las partículas virales. Son mascarillas térmicas reutilizables y permiten la respiración normal del usuario.
+
+######
+
+"La mascarilla se ha convertido en un elemento más de uso cotidiano para todos nosotros. No salimos de casa sin ella. Es nuestra primera arma de protección contra el coronavirus. Pero, ¿y si las mascarillas no sólo funcionaran como pared que la Covid no puede traspasar, sino que, además, inactivaran al virus?Es el objetivo de los investigadores del Instituto de Tecnología de Massachusetts –MIT por sus siglas en inglés–, tal y como apuntan en un artículo publicado en MIT News. Estas mascarillas, explican, incorporan una malla de cobre caliente. A medida que la persona que la usa inhala y exhala, el aire fluye a través de la malla y las partículas virales en el aire se ralentizan e inactivan por el efecto de la malla y las altas temperaturas.Dicha máscara, continúan, podría ser útil para los profesionales de la salud, así como para el común de los ciudadanos en las situaciones en las que el distanciamiento social sea difícil de lograr.“Es un concepto de máscara completamente nuevo, ya que no bloquea el virus. De hecho, permite que este virus atraviese la máscara, pero lo ralentiza y lo inactiva”, anota Michael Strano, uno de los profesores del MIT. Los investigadores han comenzado a construir prototipos y esperan empezar a probarlos pronto.Explican en el artículo que los investigadores llevan desde marzo inquiriendo en el sector de las mascarillas. Descubrieron que no existían mascarillas capaces de matar al virus por calentamiento: “Las máscaras que usamos ahora están diseñadas para capturar parte del virus. Ofrecen protección, pero nadie está pensando realmente en inactivar el virus y esterilizar el aire. Eso me sorprendió”, señala Strano.Los investigadores calcularon la rapidez con la que se degradan los coronavirus a diferentes temperaturas y condiciones de atrapamiento, y encontraron que a una temperatura de aproximadamente 90 grados Celsius se podría lograr la reducción de entre mil y un millón de partículas virales, dependiendo del tamaño final de la máscara.También demostraron que esa temperatura se puede lograr pasando una corriente eléctrica a través de una malla de cobre de 0,1 milímetros de espesor o un calentador termoeléctrico alimentado por una pequeña batería. Los prototipos actuales incluyen una batería de 9 voltios, que proporcionaría suficiente energía para calentar la máscara durante unas horas y enfriar el aire antes de inhalarlo.“Por supuesto, debemos ser conscientes de la seguridad y la comodidad de los usuarios de mascarillas”, aclara el estudiante graduado del MIT Samuel Faucher. ""El aire se enfriará después de la inactivación viral para que la máscara sea cómoda y segura de usar"". La malla de cobre está rodeada de neopreno, un material aislante que evita que el exterior de la máscara se caliente demasiado para usarlo.""Lograr la temperatura para la inactivación de virus mientras se aísla térmicamente la cara de la persona y se garantiza una inhalación de aire frío aceptable supuso un desafío interesante para la transferencia de calor, que resolvimos con aislamiento de neopreno y calefacción regenerativa"", expone Jacopo Buongiorno, profesor de TEPCO de Ciencia e Ingeniería Nuclear en el MIT.Otra de las ventajas de estas mascarillas térmicas capaces de acabar con el coronavirus es que, debido a que matan el virus, no es necesario descontaminarlas ni desecharlas después de su uso. Además, pueden ofrecer protección adicional al eliminar el virus en lugar de solo filtrarlo.Las mascarillas térmicas serían más caras que las de tela o las mascarillas quirúrgicas, pero pueden ser útiles en situaciones donde el riesgo de exposición la Covid es alto y el costo es menos preocupante, dicen los investigadores. Han solicitado una patente sobre el diseño de su máscara y planean comenzar a probar prototipos en el MIT con colaboradores.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología."
+
+######
+
+04.11.2020
+
+######
+
+20BITS
+
+######
+
+Calor,Coronavirus,Mascarillas,Mascarillas coronavirus,Noticias de tecnología,Covid-19,Virus respiratorios,Estado de alarma por coronavirus,
+
+######
+
+https://www.20minutos.es/noticia/4442795/0/crean-una-mascarilla-que-mata-al-coronavirus-con-calor/

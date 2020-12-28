@@ -1,0 +1,25 @@
+El simulador que te dice cuántos contagiados de Covid puede provocar una reunión en tu casa
+
+######
+
+
+
+######
+
+"Con la Navidad a la vuelta de la esquina y en plena pandemia de coronavirus, las autoridades sanitarias ya están perfilando restricciones ante los riesgos que puede conllevar una reunión familiar en casa durante esas fechas. A pesar de que es imposible predecir si una persona asintomática infectada con Covid-19 transmitirá o no el virus a otras, sí se puede calcular el riesgo para tratar de evitar que el contagio se produzca. Para ello, la edición digital del semanario alemán Die Zeit ha creado un simulador con el que cualquiera puede comprobar las probabilidades de contraer o no la enfermedad en diferentes ámbitos sociales: una reunión familiar, un aula, un coro, un restaurante o una oficina.Para ello, han puesto en práctica una herramienta desarrollada por un grupo de investigación del Instituto Max Planck de Química, en la que se puede regular el número de personas que habrá en esa habitación, cuánto tiempo permanecerán allí y las condiciones en las que estarán —el tamaño de la sala, la altura del techo o los sistemas de ventilación—.Tal y como explican, hay dos constantes en cada escenario planteado: una de las personas de la sala es contagiosa, y todas cumplen las reglas de distanciamiento social.&nbsp;Tomando como ejemplo una reunión en una sala no ventilada de 30 metros cuadrados entre 6 personas —la cifra máxima que baraja el Gobierno para esta Navidad— que llevan allí 4 horas, de las cuales la mitad del tiempo han estado hablando en un tono normal y sin mascarilla, el resultado arroja al menos un posible contagio por los aerosoles. De poco serviría abrir brevemente las ventanas 10 minutos cada hora, en este mismo contexto y según este simulador, ya que seguiría habiendo, al menos, un contagio. Únicamente con un sistema de ventilación permanente&nbsp;o con el uso de mascarillas se podría evitar la propagación del virus en este escenario simulado.En el caso del aula de un colegio, el medio alemán asegura que ""es un entorno perfecto para intercambiar aerosoles y respirar partículas"", especialmente si el portador del virus es el profesor, ya que ""el riesgo de infección para los demás aumenta sustancialmente"", indica Die Zeit.En un escenario en el que 13 personas comparten un aula de 60 metros cuadrados durante 4 horas y media sin ventilación y hablando el 80% del tiempo, el profesor —persona hipotéticamente contagiada— podría infectar al menos a otra persona de la clase, según este simulador.""Nuestro modelo muestra que el riesgo de infección se puede reducir aproximadamente a la mitad con ventilación regular e incluso en un factor de cinco a diez si además se usan mascarillas"", sostiene el químico atmosférico Jos Lelieveld, que ha dirigido esta investigación.Los coros son uno de los escenarios donde mayor es la propagación del virus debido al volumen y la intensidad con la que se emiten partículas al aire al cantar. En el caso de que haya una persona contagiosa, los aerosoles se esparcirían por la sala de modo que otras personas podrían inhalarlos. Aunque la ventilación puede ayudar a disminuir el riesgo, siempre sigue existiendo, destacan los investigadores.Las reuniones sociales en restaurantes, en los que se aúnan factores como comer sin mascarillas, hablar, reír o sentarse juntos, hacen más probable la transmisión del virus, según han destacado los autores de este estudio. ""Cuanto mayor sea la multitud, más personas podrían infectarse"", indican.Según su simulación, si 18 personas —entre las cuales hay una contagiada— comparten un espacio interior en un establecimiento —sin ventilación— durante unas 3 horas y hablando en un tono alto, al menos otras 2 personas podrían contraer el virus.A pesar de que las autoridades sanitarias recomiendan el teletrabajo, hay muchos trabajadores que acuden a la oficina de forma presencial. En este caso, el riesgo de infectarse depende mucho de cómo está distribuido el espacio, si existe una buena ventilación, hay mamparas divisorias o habitaciones más pequeñas. Asimismo, llevar mascarillas únicamente para desplazarse por la oficina y quitársela en el puesto de trabajo no es suficiente, según los científicos, para evitar ser contagiado.En un escenario en el que 6 personas comparten 8 horas en una oficina de 40 metros cuadrados sin ventilación, la persona contagiada podría transmitir la enfermedad al menos a un compañero de trabajo."
+
+######
+
+28.11.2020
+
+######
+
+20minutos
+
+######
+
+Navidad,Salud,Coronavirus,Covid-19,Virus respiratorios,Estado de alarma por coronavirus,
+
+######
+
+https://www.20minutos.es/noticia/4491939/0/simulador-cuantos-contagiados-covid-provoca-reunion-casa/
