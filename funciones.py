@@ -3,17 +3,22 @@ import numpy as np
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
+from sklearn.tree import DecisionTreeClassifier
+
 
 #Ingresar txt a dataset
 def ingresar_noticias(direccion, dataset):
     for ficheroIN in (glob.glob(direccion)):
         dataset.append(ficheroIN)
 
+#Muestro el documento
+def string_doc(id, noticias):
+    archivo = open(noticias[id], "r", encoding='utf-8', errors='ignore')
+    texto = archivo.read().strip()
+    return texto
 
 #Remover puntuación
 def remove_punctuation ( text ):
@@ -75,18 +80,12 @@ def preprocess(data):
     data = remove_stop_words(data)
     return data
 
-def texto_procesado(processed_text, noticias_despoblacion, noticias_no_despoblacion):
+#Texto procesado
+def texto_procesado(processed_text, noticias):
     cont = 0
     processed_text = []
-    for i in range(len(noticias_despoblacion)):
-        archivo = open(noticias_despoblacion[i], "r", encoding='utf-8', errors='ignore')
-        texto = archivo.read().strip()
-        archivo.close()
-        cont = cont +1
-        processed_text.append(preprocess(texto))
-
-    for i in range(len(noticias_no_despoblacion)):
-        archivo = open(noticias_no_despoblacion[i], "r", encoding='utf-8', errors='ignore')
+    for i in range(len(noticias)):
+        archivo = open(noticias[i], "r", encoding='utf-8', errors='ignore')
         texto = archivo.read().strip()
         archivo.close()
         cont = cont +1
@@ -99,21 +98,32 @@ def texto_procesado(processed_text, noticias_despoblacion, noticias_no_despoblac
 
 #Creación de clases
 
-def crea_clases(clases):
-    for i in range (0,158):
-        clases.append("Despoblacion") #Despoblacion
+def crea_clases(clases, processed_text):
+    for i in range(0, 185):
+        clases.append("Despoblacion")  # Despoblacion
 
-    for i in range (158,1274):
-        clases.append("No despoblacion") #No despoblacion
+    for i in range(185, len(processed_text)):
+        clases.append("No despoblacion")  # No despoblacion
     
     le = preprocessing.LabelEncoder()
     le.fit(clases)
 
+    return clases
 
-cv = TfidfVectorizer()
-X_traincv = cv.fit_transform(processed_text)
-X_traincv.toarray()
+#Proceso TFIDF
+def tfid(processed_text):
+    cv = TfidfVectorizer()
+    X_traincv = cv.fit_transform(processed_text)
+    return X_traincv
 
-def naive_bayes(X_traincv, clases)
-mnb = MultinomialNB()
-mnb.fit(X_traincv, clase)
+#Naive Bayes
+def naive_bayes(X_traincv, clases):
+    mnb = MultinomialNB()
+    mnb.fit(X_traincv, clases)
+    return mnb
+
+def decision_tree(X_traincv, clases):
+    tree = DecisionTreeClassifier(random_state=0)
+    tree.fit(X_traincv, clases)
+    return tree
+
