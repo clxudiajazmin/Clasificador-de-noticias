@@ -82,7 +82,7 @@ def preprocess(data):
     return data
 
 #Texto procesado
-def texto_procesado(processed_text, noticias):
+def texto_procesado(noticias):
     cont = 0
     processed_text = []
     for i in range(len(noticias)):
@@ -112,9 +112,12 @@ def crea_clases(clases, processed_text):
     return clases
 
 #Proceso TFIDF
-def tfid(processed_text):
-    cv = TfidfVectorizer()
+def tfid(processed_text, cv):
     X_traincv = cv.fit_transform(processed_text)
+    return X_traincv
+
+def tfid_fit(processed_text, cv):
+    X_traincv = cv.transform(processed_text)
     return X_traincv
 
 #Naive Bayes
@@ -135,6 +138,6 @@ def ramdonforest(X_traincv, clases):
     random_forest.fit(X_traincv, clases)
     return random_forest
 
-def prediccion(modelo,noticia):
+def prediccion(modelo, noticia):
     pred = modelo.predict(noticia)
     return pred
