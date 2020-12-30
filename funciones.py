@@ -1,27 +1,34 @@
+#Librerías
 import glob
 import numpy as np
+
+#Librerías NLTK
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
+
+#Librerías SKLEARN
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 
+despoblacion = []
+ingresar_noticias("despoblación/*.txt", despoblacion)
 
 #Ingresar txt a dataset
 def ingresar_noticias(direccion, dataset):
     for ficheroIN in (glob.glob(direccion)):
         dataset.append(ficheroIN)
 
-#Muestro el documento
+#Imprimir el documento
 def string_doc(id, noticias):
     archivo = open(noticias[id], "r", encoding='utf-8', errors='ignore')
     texto = archivo.read().strip()
     return texto
 
-#Remover puntuación
+#Remover puntuacion
 def remove_punctuation ( text ):
     return re.sub('[%s]' % re.escape(string.punctuation), ' ', text)
 
@@ -29,7 +36,6 @@ def remove_punctuation ( text ):
 #Pasar todo a minúsculas
 def convert_lower_case(data):
     return np.char.lower(data)
-
 
 #Remover lista de parada
 def remove_stop_words(data):
@@ -41,8 +47,7 @@ def remove_stop_words(data):
             new_text = new_text + " " + w
     return new_text
 
-
-#Quitar puntuación
+#Quitar puntuacion
 def remove_punctuation(data):
     symbols = "!\"#$%&()*+-./:;<=>?@[\]^_`{|}~\n"
     for i in range(len(symbols)):
@@ -51,11 +56,9 @@ def remove_punctuation(data):
     data = np.char.replace(data, ',', '')
     return data
 
-
 #Quitar apostrofe
 def remove_apostrophe(data):
     return np.char.replace(data, "'", "")
-
 
 #Stem
 def stemming(data):
@@ -66,7 +69,6 @@ def stemming(data):
     for w in tokens:
         new_text = new_text + " " + stemmer.stem(w)
     return new_text
-
 
 #Función Preprocesado de datos
 def preprocess(data):
@@ -83,13 +85,11 @@ def preprocess(data):
 
 #Texto procesado
 def texto_procesado(noticias):
-    cont = 0
     processed_text = []
     for i in range(len(noticias)):
         archivo = open(noticias[i], "r", encoding='utf-8', errors='ignore')
         texto = archivo.read().strip()
         archivo.close()
-        cont = cont +1
         processed_text.append(preprocess(texto))
 
     print('Cantidad de tento procesado: ', len(processed_text))
@@ -97,10 +97,9 @@ def texto_procesado(noticias):
     return processed_text
 
 
-#Creación de clases
-
+#Creación de arreglo de clases
 def crea_clases(clases, processed_text):
-    for i in range(0, 185):
+    for i in range(0, len(despoblacion)):
         clases.append("Despoblacion")  # Despoblacion
 
     for i in range(185, len(processed_text)):
