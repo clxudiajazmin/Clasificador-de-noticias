@@ -1,0 +1,25 @@
+Adiós a Adobe Flash Player: 25 años de historia y un declive que empezó con el iPhone
+
+######
+
+El próximo 31 de diciembre, Adobe Flash dejará de estar disponible. Ha sido un cuarto de siglo de éxitos, pero también de vulnerabilidades y una decadencia en la que tuvo mucho que ver Apple.
+
+######
+
+Lo sabíamos desde hace tiempo, pero eso no empece para que cause cierta tristeza saber que cada vez queda menos para decir adiós a Adoble Flash Player. El mítico reproductor morirá el próximo 31 de diciembre, coincidiendo con su 25 cumpleaños.Un cuarto de siglo de historia que llega a su fin, entre otros motivos, “por la gran cantidad de incidencias en materia de seguridad que acumula, como son vulnerabilidades, fallos de seguridad y uso en ataques contra usuarios”, tal y como apuntan desde el Instituto Nacional de Seguridad –Incibe–.&nbsp;También ha influido, explican, “la presencia en el mercado de nuevos estándares que mejoran la calidad de los archivos multimedia y que este complemento fuera poco a poco perdiendo el respaldo de la industria creadora de contenidos”.Mencionan, además, en Incibe, que otra de las razones –para muchos la principal– fue que “el declive de Adobe Flash comenzó en 2010, cuando el fundador de Apple anunció que la empresa estaba buscando herramientas y estándares alternativos a Flash Player con el objetivo de usar tecnologías más modernas y eficientes en sus dispositivos –iPhone o iPad– y, para ello, trataría de lograr el consenso de otras empresas del sector”.A partir de ese momento, subrayan, “se produjo el despegue de las herramientas y estándares competidoras acelerando el declive de Adobe Flash hasta que, en julio de 2017, la empresa propietaria anunció su fin, dando un plazo de tres años para que los propietarios de webs, diseñadores o desarrolladores pudieran migrar todos los elementos de la página que usaban Flash hacia alternativas más modernas y respaldadas por las empresas creadoras de contenidos de Internet como son HTML5, WebGL o WebAssembly”.En Incibe dan una serie de recomendaciones:Para rememorar la historia de Flash Player desde sus inicios hay que viajar a 1980, cuando un estudiante de Secundaria llamado Jonathan Gay creó un programa llamado SuperPaint, que llamó la atención de la empresa Silicon Beach Software, la cual fichó a Gay.En 1993, Gay crea su propia compañía, Future Wave Software, y muy pronto nace el programa SmartSketch. Dos años después se convirtió en Future Splash Animator y empezó a comercializarse. Su éxito llamó la atención de Macromedia, que lo compró en 1996 y lo renombró como Flash. Macromedia lo mejoró y lo convirtió en un plugin habitual en prácticamente todos los navegadores, por encima de otros como Java o Windows Media Player.El siguiente gran paso se dio en 2005, cuando Adobe compró Macromedia. Aquello que debía ser el salto definitivo fue también el principio del fin. Llegaron nuevas y actualizadas versiones, pero también comenzaron a descubrirse las costuras en forma de problemas de seguridad. Entonces apareció el iPhone –no compatible con Flash– y después HTML5. Y con él, ya sí que sí, el comienzo del declive que ya perece.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología.
+
+######
+
+30.10.2020
+
+######
+
+20BITS
+
+######
+
+Internet,Adobe Flash Player,Noticias de tecnología,tagfree,
+
+######
+
+https://www.20minutos.es/noticia/4436836/0/adios-a-adobe-flash-player-25-anos-de-historia-y-un-declive-que-empezo-con-el-iphone/

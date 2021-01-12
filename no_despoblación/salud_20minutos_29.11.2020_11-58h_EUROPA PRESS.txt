@@ -1,0 +1,25 @@
+Importantes avances en el tratamiento de uno de los cánceres de mama más agresivos
+
+######
+
+
+
+######
+
+Un estudio del Instituto de Investigación Sanitaria Incliva del Hospital Clínico de Valencia, en conjunto con el Instituto de Investigación Sanitaria de la Fundación Jiménez Díaz (IIS-FJD), muestra por primera vez que la subexpresión de miR-33b está relacionada con un mal pronóstico en pacientes HER2+, uno de los cánceres de mama más agresivos y asociado a baja supervivencia; lo que abre las puertas al diseño de nuevos fármacos contra este subtipo de cáncer.Uno de los principales hallazgos del estudio es la demostración de que el miR-33b (un RNA de cadena simple capaz de regular la expresión de otros genes) actúa como un miRNA, supresor tumoral en cáncer de mama HER2+, que podría inhibir la migración e invasión tumoral, en parte, al impedir la transición epitelio-mesenquima, un proceso crucial durante el desarrollo de la tumorigénesis y la metástasis.El trabajo, cuyos resultados se han publicado recientemente en Frontiers in Oncology, en un artículo titulado El microRNA-33b suprime la transición epitelial-mesenquimal reprimiendo la vía MYC-EZH2 en el carcinoma de mama HER2 +, muestra que miR-33b está menos expresado en muestras de tumor de mama HER2+ en comparación con tejidos de mama normal.Se partía de evidencias que indicaban que la transición epitelio-mesenquima es responsable de la invasión y migración de las células cancerosas y supone un paso inicial de la metástasis. Por otra parte, se habían documentado niveles bajos de miR-33b en muchos tipos de cánceres y su papel en la proliferación, migración y dicha transición.Así las cosas, en el trabajo se quiso evaluar la implicación de miR-33b en la vía EMT en el cáncer de mama HER2+ y analizar el papel del gen EZH2, un regulador clave en el control de la diferenciación de células madre y los procesos de proliferación celular, en este proceso, así como la interacción entre ellos.Se realizaron estudios de expresión mediante PCR cuantitativa en líneas celulares de cáncer de mama HER2+ y muestras de pacientes, así como de controles sanos. También se llevaron a cabo experimentos de ganancia y pérdida de función del miR-33b y de los genes de interés para evaluar en las células de cáncer de mama los cambios en su capacidad de invasión, migración y los efectos en el ciclo celular y la apoptosis (muerte celular programada con objeto de controlar su crecimiento y que es desencadenada por señales propias de la célula).En este sentido, los resultados sugieren a miR-33b como un supresor tumoral que inhibe la metástasis y la invasión en el cáncer de mama HER2+, en parte impidiendo el proceso de transición epitelio mesénquima a través de la represión del bucle MYC (una familia de protoncogenes que en condiciones normales está implicada en la regulación de la expresión génica) - EZH2, y establecer un nuevo eje miR-33b / MYC / EZH2, como modulador del crecimiento y la progresión de las células mamarias. Para el estudio se han utilizado los equipamientos de UCIM (Unidad Central de Investigación Médica de la Universidad de Valencia): PCR cuantitativa y servicio de citometría.En la investigación, dirigida por la co-coordinadora del Grupo de Investigación de Biología en Cáncer de Mama, la doctora Pilar Eroles, han participado, además del director del IIS-FJD, el doctor Federico Rojo, la doctora Ana Lluch, co-coordinadora también del Grupo de Investigación de Biología en Cáncer de Mama de Incliva, y el resto de los investigadores de este equipo: Birlipta Pattanayak, Iris Garrido-Cano, Anna Adam-Artigues, Eduardo Tormo, Begoña Pineda, Paula Cabello, Elisa Alonso, Begoña Bermejo, Cristina Hernando, María Teresa Martínez, Octavio Burgués, Juan Miguel Cejalvo. Además, también han intervenido los doctores Ana Rovira y Joan Albanell, del Instituto de Investigaciones Médicas del Hospital del Mar de Barcelona.El estudio ha sido financiado por el Proyecto PI18/01219 y el Centro de Investigación Biomédica en Red en Oncología CIBERONC (CB16/12/00481) del Fondo de Investigaciones Sanitarias, Ministerio de Economía y Competitividad.
+
+######
+
+29.11.2020
+
+######
+
+EUROPA PRESS
+
+######
+
+Cáncer,Tumor,Cáncer de mama,Salud,Metástasis,Células,Medicina,tagfree,
+
+######
+
+https://www.20minutos.es/noticia/4492670/0/importantes-avances-tratamiento-canceres-mama-mas-agresivos/

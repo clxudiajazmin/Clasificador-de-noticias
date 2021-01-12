@@ -1,0 +1,25 @@
+Los ‘chiringuitos financieros’ se sofistican para quedarse con sus ahorros | Negocios | EL PAÍS
+
+######
+
+La CNMV alerta del uso de nuevas tecnologías por parte de los delincuentes para robar los ahorros de los ciudadanos
+
+######
+
+En los últimos meses la Comisión Nacional del Mercado de Valores (CNMV) ha recibido numerosos testimonios de inversores españoles sobre el uso de nuevas herramientas informáticas por parte de los conocidos como chiringuitos financieros —entidades que prestan servicios de inversión sin autorización, no inscritas en los registros de este organismo—, que les han provocado importantes pérdidas en el patrimonio invertido, como resultado de las operaciones realizadas o por lo poco operativo de sus intentos por recuperar el saldo de sus cuentas de valores.Los testimonios recibidos se centran en el recurso a dos herramientas que las condiciones derivadas de las medidas adoptadas con motivo de la covid-19 han popularizado: el software de acceso remoto (como AnyDesk, LogMeIn, TeamViewer) y las redes privadas virtuales (servicios de VPN). En la primera de las prácticas, este tipo de herramientas permite conectarse en remoto a los diferentes dispositivos de los usuarios (ordenadores, teléfonos) para, entre otros servicios, poder ofrecerles acceso a sus dispositivos a distancia, desde otro terminal, o para gestionar, por parte de terceros, problemas informáticos. “Se ha detectado que los chiringuitos financieros están recurriendo a estas herramientas para conectarse al dispositivo de un inversor y apropiarse de datos (como códigos de acceso o contraseñas) que les permiten, posteriormente, operar sobre las cuentas de valores del inversor, sin contar con la autorización expresa de este”, avisa el supervisor en una nota.En ocasiones, es el propio chiringuito financiero el que invita al inversor a instalar previamente una aplicación de acceso remoto específica, pero a veces puede utilizar alguna de las disponibles en el ordenador del propio inversor. “Una vez que el chiringuito financiero está conectado de forma remota al dispositivo del inversor, le solicita a este que inicie una sesión en la página web a través de la que presta indebidamente sus servicios de inversión, captando los códigos de acceso necesarios para operar posteriormente en la cuenta de valores del inversor. Otras veces, de forma más directa, le solicita al inversor que aporte sus claves de acceso a las cuentas de valores”, detallan en la CNMV.El uso indebido de este software de acceso remoto, además de las consecuencias que pueden derivarse para los inversores —comunes al resto de herramientas que utilizan los chiringuitos financieros—, dificulta las investigaciones que se pudieran realizar, en sede policial o judicial, en relación con la identificación del ordenante de las operaciones realizadas. “Vienen a ser nuevas modalidades de una práctica que, pese a su sencillez e ingenuidad, sigue provocando víctimas en el entorno de los chiringuitos financieros, la de facilitar a terceros las claves de acceso a las cuentas bancarios o de valores, sobre cuyos riesgos es necesario insistir”, incide el supervisor.Por su parte, los servicios VPN se pueden utilizar para, entre otras funciones, ocultar la dirección de Internet (conocida como IP), que actúa a modo de un identificador público de cada dispositivo informático en la Red. Este identificador es único para cada dispositivo y permite conocer, entre otros elementos, su ubicación geográfica. Algunas entidades, para no ser caracterizadas como chiringuitos financieros que ofrecen servicios de inversión a inversores españoles, bloquean el acceso a sus páginas web a IP procedentes de España. “No obstante, se han recibido testimonios de inversores a los que algunos chiringuitos financieros, por vía telefónica, han propuesto utilizar servidores VPN, lo que permite ocultar o simular la IP de sus dispositivos informáticos, de forma que las páginas web a través de la que los chiringuitos financieros ofrecen sus servicios no identifiquen la procedencia real del inversor y pueda eludir el bloqueo mencionado, que se convierte en solo aparente”, señalan los expertos.La CNMV, para combatir las nuevas tretas informáticas de los delincuentes, aconsejan cumplir con cuatro reglas básicas: no comparta con terceros las claves de acceso a sus cuentas bancarias y de valores; no permita el acceso remoto a sus dispositivos informáticos; no inicie una sesión para operar con sus cuentas bancarias y de valores con un tercero conectado; y no recurra a servicios VPN para ocultar su IP y entrar en páginas web bloqueadas a IP procedentes de España.
+
+######
+
+2020-11-29
+
+######
+
+David Fernández
+
+######
+
+Economía, CNMV, Chiringuitos financieros, Finanzas personales, Fraudes, Inversión, Bolsa, 
+
+######
+
+https://elpais.com/economia/2020-11-29/los-chiringuitos-financieros-se-sofistican-para-quedarse-con-sus-ahorros.html

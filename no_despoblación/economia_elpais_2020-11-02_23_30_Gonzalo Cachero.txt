@@ -1,0 +1,25 @@
+Un plus de ingeniería | Negocios | EL PAÍS
+
+######
+
+Saalg Geomechanics comercializa un ‘software’ propio que reduce el gasto en proyectos de obra civil
+
+######
+
+Como la caza o la pesca, la construcción es un sector que se sitúa a la cola en digitalización. Un déficit que los ingenieros geológicos Ignasi Aliguer y Cristian de Santos ven manifestarse en los desmesurados sobrecostes que alcanzan muchos proyectos de obra civil. Crearon en 2016 Saalg Geomechanics con el objetivo de reducir ese gasto y también, confiesan, para evitar que años de investigación quedaran olvidados en una estantería —ambos comenzaron doctorados en ingeniería geotécnica por la Politècnica de Catalunya; De Santos ya lo ha concluido y Aliguer lo ultima—. La empresa comercializa un programa informático que agrega constantes mediciones de diferentes parámetros del terreno y trabaja sobre ellas.“Vimos que el software que había empleado en mi tesis servía como prototipo de un producto vendible y decidimos lanzarnos”, cuenta De Santos. Se conocían desde 2002, cuando coincidieron en primero de carrera, y Aliguer venía además de trabajar en Houston para una empresa que recopilaba y analizaba información para el sector petrolero. “Me volví a Barcelona sabiendo lo que era la eficiencia, un valor que pesa mucho más en la industria que en la academia”, explica este último. Utilizaron sus ahorros y el dinero de varios meses de paro para reunir 29.000 euros y echaron a andar. “Los inicios fueron duros, logramos los primeros contratos gracias al respaldo ante el cliente de varios catedráticos”, cuenta De Santos.En 2017 trabajaron en un túnel adjudicado a Acciona en Noruega y desde entonces han participado en entre 30 y 40 proyectos de una veintena de clientes en tres continentes. Son seis empleados, incluyendo a ambos socios, y en 2019 facturaron 100.000 euros. Desde su prototipo inicial han evolucionado a Daarwin, un software más comercial al que ofrecen suscribirse a cambio de una cuota mensual. Un 30% de sus clientes opta por esta vía. “El servicio es el mismo lo opere nuestro equipo o el cliente. Los técnicos de cada obra miden los desplazamientos, la presión del agua y las tensiones y cuando reciben esos datos, nuestro programa afina la predicción incluida en el diseño del proyecto, lo que permite anticipar respuestas y reducir costes”, explica De Santos. “La crisis”, apunta Aliguer, “nos ha obligado a revisar las condiciones del 45% de nuestros proyectos y, en ocasiones, a suspender el pago de las suscripciones”. También han tenido que demorar su previsión de ganancias hasta 2022.
+
+######
+
+2020-11-02
+
+######
+
+Gonzalo Cachero
+
+######
+
+Economía, Negocios, Emprendedores, Ingeniería, 
+
+######
+
+https://elpais.com/economia/2020-11-02/un-plus-de-ingenieria.html

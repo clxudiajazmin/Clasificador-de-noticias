@@ -1,0 +1,25 @@
+Indultos problemáticos | El juego de la ciencia | EL PAÍS
+
+######
+
+Los problemas lógicos de prisioneros que pueden -o no- ser indultados son tan numerosos como interesantes
+
+######
+
+De nuestros tres presos de la semana pasada, Carlos es el único que tiene motivos para alegrarse, y mucho. La suposición de Alberto de que, tras saber que Bernardo no será indultado, su probabilidad ha subido de 1/3 a 1/2 es errónea. Ya sabía que uno de los otros dos no iba a ser indultado, y averiguar su nombre no cambia nada. Sin embargo, puesto que la probabilidad de que el indultado estuviera entre Bernardo y Carlos era 2/3, al descartar a Bernardo esa probabilidad se concentra en Carlos, que ve así duplicada su probabilidad de indulto.La estrategia óptima en el caso de los 100 prisioneros y los 100 cajones es la siguiente:Cada prisionero abre, en primer lugar, el cajón cuyo número coincide con el de su uniforme. Si en su interior está la tarjeta con su número, ya ha superado la prueba; si, como es lo más probable, hay otro número, a continuación abre el cajón correspondiente a ese número, y así sucesivamente hasta encontrar su número o agotar su cupo de 50 cajones. En un excelente artículo de Clara Grima titulado El dilema de los 100 prisioneros, las/os lectoras/es que deseen profundizar en este interesante problema encontrarán un desarrollo minucioso ilustrado con grafos.Puesto que la probabilidad de éxito, cuando los prisioneros no siguen estrategia alguna, disminuye exponencialmente al aumentar su número, se podría pensar que si dicho número pasara, pongamos por caso, de 100 a 1000, su probabilidad de éxito disminuiría considerablemente por más que aplicaran la estrategia óptima; pero, sorprendentemente, no es así: por mucho que aumente el número de prisioneros y cajones, la probabilidad de conseguir el indulto siempre se mantiene ligeramente por encima del 30%.Otros dos clásicos que no se puede dejar de mencionar al hablar de problemas de presos e indultos, son el de los sombreros blancos y negros y el del ahorcamiento inesperado. Aunque es probable que mis sagaces lectoras/es ya los conozcan, no está de más recordarlos:Un rey decide indultar a uno de entre tres prisioneros. Los manda llamar y les dice: “En este cofre hay tres sombreros blancos y dos negros. Ahora os pondréis de cara a la pared y haré que os pongan un sombrero a cada uno, de manera que cada cual podrá ver los sombreros de los otros dos, pero no el propio. Quien deduzca de qué color es su sombrero, quedará libre”.Les ponen los tres sombreros blancos y acto seguido los tres prisioneros se miran en silencio. Uno de ellos mueve la cabeza desconcertado, otro se encoge de hombros y el tercero anuncia: “Mi sombrero es blanco”. ¿Cómo lo ha deducido?La paradoja (¿o es una falacia?) del ahorcamiento inesperado, que, por cierto, da título a un libro del maestro Martin Gardner, es la siguiente:Un juez condena a un astuto criminal a morir en la horca y le dice: “Serás ahorcado un día de la semana que viene, pero no sabrás de antemano la fecha de tu ejecución”.“Eso significa que no puedo ser ahorcado el domingo, pues, al ser el último día de la semana, el sábado lo sabría -argumenta el condenado-. Tampoco puedo ser ahorcado el sábado, pues, al quedar descartado el domingo, el viernes sabría que iba a ser ejecutado al día siguiente. Y, prosiguiendo con este razonamiento, todos los días quedan descartados uno tras otro, por lo que no seré ahorcado”.¿Es correcto su razonamiento? Si no lo es, ¿dónde está el fallo?Carlo Frabetti es escritor y matemático, miembro de la Academia de Ciencias de Nueva York. Ha publicado más de 50 obras de divulgación científica para adultos, niños y jóvenes, entre ellos ‘Maldita física’, ‘Malditas matemáticas’ o ‘El gran juego’. Fue guionista de ‘La bola de cristal’.Puedes seguir a Materia en Facebook, Twitter, Instagram o suscribirte aquí a nuestra newsletter
+
+######
+
+2020-11-27
+
+######
+
+Carlo Frabetti
+
+######
+
+Ciencia, Matemáticas, Juego, Carlo Frabetti, 
+
+######
+
+https://elpais.com/ciencia/2020-11-27/indultos-problematicos.html

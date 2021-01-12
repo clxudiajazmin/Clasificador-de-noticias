@@ -1,0 +1,50 @@
+Esta web recrea el tiempo de carga de Internet en sus inicios
+
+######
+
+Un texto, un par de imágenes, un audio de dos segundos… Todo a 175 bits por segundo. Es la web –de juguete– creada para que echemos la vista atrás y recordemos cómo era Internet hace no tantos años.
+
+######
+
+Si entras en sloww.ml sin saber de qué va, pensarás que tu conexión está fallando. Pero pronto saldrás de dudas, porque un texto comenzará a escribirse en la pantalla. Dice esto: “Está experimentando la carga de una web a 175 bits por segundo. Da igual lo rápida que sea su conexión a Internet, esta página cargará lentamente”.“Por favor, espera...”El creador de esta página es Terence Eden que, en su blog, reconoce que quizás el estar encerrado en casa le haya vuelto un poco loco y de ahí haya surgido esta idea. En estos tiempos de la inmediatez, en la que necesitamos –o eso creemos– que la red vaya a toda velocidad, esta página nos pone frente a frente con nuestro pasado al pergeñar una web que recrea el tiempo de carga de Internet en sus inicios.Tras el “por favor, espera...”, la página sigue cargando y jugando con nuestra paciencia, a la vez que, poco a poco, llama la atención. En los primeros días de Internet –continúa surgiendo el texto de manera lenta– “la gente decía que no había necesidad de que funcionara más rápido que esto, ya que unos 20 caracteres por segundo es el promedio de lectura de una persona, ¿por qué transmitir información más rápido”.Esta web no sólo simula el tiempo de carga de un texto, sino también de imágenes y audios. La foto de un conejito es la elegida para este viaje al pasado. Tiene 968 bytes y tardará unos 40 segundos en cargarse por completo, advierte la página. Y poco a poco la imagen se va cargando, al principio es un muy borroso conjunto de píxeles, pero lentamente podrás ir vislumbrando qué es lo que muestra.La espera, reconoce el creador de la página, es “enloquecedora y exasperante”, pero refleja la realidad de Internet hace no tantos años. La compresión JPG, recuerda, se lanzó en 1992, cuando la velocidad de los módems era de 14.400 bits por segundo, es decir, “80 veces más que la velocidad de carga de esta página”.Otro ejemplo es el de los audios: uno de dos segundos, con la voz comprimida a 1.595 bytes, tarda alrededor de un minuto en cargarse. Y es sólo un audio, imagina cuando se cargaba algo de música.Originalmente, explica Eden, la web se diseñó para que sirviera como formación en HTML. Subraya que no utiliza Javascript ni nada parecido para simular la lentitud del Internet de antes, sino que basta con que la carga de bits sea muy lenta.Si quieres experimentar un poco más, el creador de sloww.ml propone que pruebes esta web en distintos navegadores: en Firefox, dice, funciona bastante bien; razonablemente bien en Chrome, y bastante mal en Safari.En el fondo, esta web, que es un juguete, como admite Eden, debería servir para darnos cuenta de la prisa con la que vivimos o de que, quizás, esa inmediatez que creemos precisar no es para tanto.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología.
+
+######
+
+31.10.2020
+
+######
+
+20BITS
+
+######
+
+Internet,Ordenador,Noticias de tecnología,tagfree,
+
+######
+
+https://www.20minutos.es/noticia/4437582/0/esta-web-recrea-el-tiempo-de-carga-de-internet-en-sus-inicios/
+Apple crece a pesar de la crisis sanitaria y del retraso del iPhone 12
+
+######
+
+La compañía ha registrado unas ventas trimestrales de 64.700 millones de dólares, con récords históricos para el Mac y servicios.
+
+######
+
+"Apple ha anunciado los resultados financieros del cuarto trimestre de su año fiscal 2020, cerrado el pasado 26 de septiembre. La compañía ha registrado unas ventas trimestrales de 64.700 millones de dólares y un beneficio neto trimestral de 0,73 dólares por acción.Las divisiones de Mac y de servicios han batido récords, con ingresos de 9.032 millones y 14.549 millones de dólares respectivamente, mientras que los ingresos en ventas de por su smartphone han descendido un 21% interanualmente. La razón está clara: los iPhone 12 han salido fuera de este trimestre fiscal -aunque adelantan que&nbsp;""la respuesta al lanzamiento ha sido tremendamente positiva""-.“Apple ha culminado un año fiscal definido por la innovación frente a la adversidad con un récord en el trimestre de septiembre, liderado por récords históricos para el Mac y servicios”, ha dicho Tim Cook, CEO de la firma. A pesar de los impactos continuos de la crisis sanitaria, asegura que la compañía se encuentra en medio de su periodo de presentación de productos “más prolífico hasta la fecha”.Por su parte, el director financiero de Apple, Luca Maestri, ha dicho que el “excelente rendimiento en el trimestre de septiembre concluye un año fiscal extraordinario”, en el que se han establecido “nuevos récords históricos de ingresos, beneficios por acción y flujo de caja libre”, a pesar de un entorno macroeconómico “extremadamente volátil y desafiante”.Así ha confirmado el CEO de Apple algo que ya veníamos constatando: que la situación de crisis mundial está aumentando la adopción de pagos sin contacto.En concreto, la solución de pago contactlessApple Pay de Apple es actualmente la tercera más grande del mundo, con 441 millones de usuarios. Lideran Alipay y WeChat en China, con 1.200 y 1.150 millones de usuarios, y el Top 5 lo completan Google Pay y Samsung Pay, ambos con 100 millones de usuarios.En lo que respecta a los países, como era de esperar, China es el país con la mayor adopción de pagos móviles sin contacto. El 47% de la población usa la tecnología. Noruega ocupa el segundo lugar con un 42%, seguida por el Reino Unido (24%), Japón (20%) y Australia (19%).Algunos expertos ya apuntan a que en 2020 los pagos móviles superarán los pagos en efectivo y con tarjeta de crédito en el número de transacciones.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología."
+
+######
+
+31.10.2020
+
+######
+
+20BITS
+
+######
+
+iPhone,Apple,Mac,Tim Cook,Noticias de tecnología,tagfree,iPhone 12,
+
+######
+
+https://www.20minutos.es/noticia/4438423/0/apple-crece-a-pesar-de-la-crisis-sanitaria-y-del-retraso-del-iphone-12/

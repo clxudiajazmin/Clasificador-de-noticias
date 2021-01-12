@@ -1,0 +1,25 @@
+"Ayuntamiento de Logroño: ""Hemos pasado de trabajar con tecnologías con múltiples incidencias y desactualizadas a tener un sistema integrado y eficaz"""
+
+######
+
+El consistorio ha migrado sus servicios a Microsoft 365 con la ayuda de las empresas tecnológicas Hiberus y Esprinet.
+
+######
+
+La crisis sanitaria ha sido la prueba de que en pleno siglo XXI ya no se puede vivir desactualizado digitalmente. Tanto las compañías privadas como los organismos públicos han sufrido los efectos de esta situación que tiene en jaque a todo el planeta: se limitan los movimientos, se recomienda el teletrabajo y se cambian las salas de reuniones habituales por meetings en diferentes plataformas virtuales.Esa virtualización de nuestro día a día implica trabajar con infraestructuras sólidas que soporten las rutinas laborales y respondan eficazmente a las necesidades de los empleados, ofreciendo servicios que faciliten el trabajo en remoto. Al prescindir del contacto y los espacios físicos a los que estábamos acostumbrados, la tendencia es girar hacia entornos colaborativos que permitan compartir de forma segura la actividad de la empresa o la organización.Con esta meta en mente, el Ayuntamiento de Logroño ha modernizado su sistema de correo, agenda y calendario corporativos y a partir de ahora trabajará con la suite de Microsoft Office 365, lo que “ha supuesto un cambio enorme en la gestión por diferentes motivos”, afirma Javier Ridruejo, coordinador general de Promoción Económica, Modernización Tecnológica y Conocimientos Profesionales del Consistorio.Por un lado, explica, ha supuesto un cambio en los sistemas, hasta ahora “con múltiples incidencias debidas a un sistema poco actualizado que además nació con una importante limitación en el espacio físico”.Se ha mejorado también la administración de la infraestructura que, “al estar en una nube externa”, ha permitido “liberar al equipo dedicado a su gestión y poder dedicarlo a otros mantenimientos”. Esto, para Ridruejo, es un avance importa ya que “estando, como cualquier organización, siempre escasos de personal” se ha podido aprovechar ese talento para tareas de más valor.“La plataforma es conocida por su gran disponibilidad, el bajo nivel de incidencias, y la gestión que hacen del spam, es compatible con nuestros sistemas de seguridad basados en IDS, firewall, antivirus y antispam, por lo que ha hecho que la integración haya sido sencilla en cuanto a seguridad”, añade el coordinador general del Ayuntamiento.En cuanto a conectividad entre los empleados, Ridruejo apunta que se está “empezando a explorar la colaboración entre equipos”, para lo que normalmente en una organización como es un Ayuntamiento haría falta una formación adecuada y tiempo de adaptación, pero que sin embargo se ha recibido con bastante facilidad y éxito: “En los equipos piloto que están probándola está suponiendo una auténtica revolución en cuanto a su forma de trabajo y la simplificación de sus procesos. Por ejemplo, la integración de la ofimática con Teams y la gestión documental que se puede hacer desde la propia aplicación es simplemente efectiva”, subraya.Por último, el coordinador general de Promoción Económica, Modernización Tecnológica y Conocimientos Profesionales del Consistorio logroñés destaca la versatilidad y la personalización del servicio, que permite “que cada usuario, con sus requisitos concretos, pague exactamente por el uso que haga de las aplicaciones que utilice, conviviendo en el mismo dominio múltiples licencias y así facilitando la gestión de costes y el ajuste económico, tan necesario siempre”. “Esta flexibilidad en las altas y bajas es importante para una organización como la nuestra”, concluye.Este paso hacia la transformación digital del Ayuntamiento de Logroño ha sido facilitado por dos empresas tecnológicas españolas: por un lado, la consultora Hiberus Tecnología y, por otro, el mayorista Esprinet.Javier Arbiol, Microsoft Business Manager en Hiberus, apunta que el proceso se ha producido sin dificultades y que “para todo el equipo de Hiberus era una prioridad poder facilitar la transición al personal del Ayuntamiento y que adquirieran esas capacidades de comunicación y trabajo colaborativo que la solución de Microsoft ofrece”.Apúntate a nuestra newsletter y recibe en tu correo las últimas noticias sobre tecnología.
+
+######
+
+18.11.2020
+
+######
+
+20BITS
+
+######
+
+Microsoft,Revolución digital,Administraciones Públicas,Noticias de tecnología,tagfree,
+
+######
+
+https://www.20minutos.es/noticia/4478403/0/ayuntamiento-de-logrono-hemos-pasado-de-trabajar-con-tecnologias-con-multiples-incidencias-y-desactualizadas-a-tener-un-sistema-integrado-y-eficaz/

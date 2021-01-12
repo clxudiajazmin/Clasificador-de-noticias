@@ -1,0 +1,25 @@
+Cómo identificar la desinformación y las 'fake news' directamente desde el buscador de Google
+
+######
+
+Durante la cuarentena aumentó el número de 'fake news', pasando de 170 noticias diarias a 253.
+
+######
+
+Con la llegada de la pandemia de la Covid-19 son muchas las compañías tecnológicas que han aumentado sus esfuerzos para combatir la desinformación y ayudar a los ciudadanos a identificar noticias falsas, que no siempre es fácil.Durante la cuarentena, España se convirtió en el país europeo en el que más aumentó el uso de las redes sociales, un dato que estuvo acompañado de un crecimiento de las fake news, que desde el 1 de marzo hasta primeros de abril, pasaron de 170 noticias diarias a 253, de las cuales seis de cada 10 tenían relación con la crisis de la Covid-19.Aunque no siempre es fácil distinguir las noticias falsas o la desinformación, los usuarios cuentan con recursos a disposición que les ayudarán en esta tarea, como es el caso del buscador de Google.Desde la propia compañía señalan la importancia de revisar la parte superior de los resultados de búsqueda, ya que es donde se encuentra la información relevante y confiable en la web abierta.En el marco de la pandemia, Google ha desarrollado una serie de recursos para que la información esté disponible rápidamente y priorice la de organizaciones oficiales como gobiernos locales, organismos electorales o agencias de salud directamente en el buscador.En situaciones de desastres naturales, pandemias y crisis -contextos más propensos a rumores y a la difusión de información falsa-, los usuarios pueden utilizar el buscador de Google para encontrar información actualizada y de última hora.Aunque los algoritmos de Google han aprendido a priorizar los contenidos más recientes y destacados ante eventos importantes, los usuarios pueden consultar las noticias más recientes de forma manual.Para ello, los usuarios tienen acceder a las Herramientas del buscador -entre las opciones disponibles bajo la barra de búsqueda-, hacer clic en la opción 'Cualquier fecha' y seleccionar 'Última hora'. De esta forma, podrán filtrar los resultados de la búsqueda que hayan sido publicados en los últimos 60 minutos.Además, cuando hay eventos importantes, Google puede publicar una Alerta SOS en la parte superior del buscador, que muestra de forma rápida información esencial sobre un tema en concreto, por ejemplo sobre la Covid-19 o un terremoto.Estas alertas -que se resaltan con un recuadro de color rojo- pueden incluir enlaces a fuentes oficiales, así como números de teléfono de emergencias, mapas e incluso traducciones de frases útiles, entre otras cosas.Algunas noticias que han sido denegadas pueden contener un sello de verificación en el buscador, Google Noticias y Google Imágenes. El sello proviene de medios de comunicación y agencias de verificación que emplean el sistema ClaimReview para resaltar las verificaciones que se han realizado.Los usuarios también pueden acceder a más contexto sobre la información que están buscando. Para ello, pueden utilizar las funciones de 'noticias relacionadas' y 'cobertura completa' en el buscador de Google y Google Noticias, que priorizan el contenido de fuentes fiables.Los usuarios también pueden acceder rápidamente desde el buscador al contenido original y noticias exclusivas, lo que puede ayudar a verificar los hechos reportados directamente desde la fuente original.Aunque Google explica que sus algoritmos no pueden determinar si un contenido en concreto sobre un evento reciente es verdadero o falso, el buscador puede identificar comportamientos relacionados con el 'spam'.La compañía ha señalado que, a pesar de que no todos los 'spammers' se dediquen a la desinformación, muchos actores malintencionados adoptan tácticas similares para distribuir contenido sospechoso.Para ello, el buscador de Google comprueba las técnicas utilizadas para dar visibilidad a una noticia y un equipo de trabajadores analiza manualmente las páginas basándose en los comentarios de los usuarios y los canales de informes para eliminar esos contenidos lo antes posible.
+
+######
+
+24.10.2020
+
+######
+
+EUROPA PRESS
+
+######
+
+Google,Redes sociales,Fake News,Noticias de tecnología,tagfree,
+
+######
+
+https://www.20minutos.es/noticia/4429712/0/como-identificar-fake-news-buscador-google/
