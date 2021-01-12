@@ -1,0 +1,25 @@
+Ciudadanos pide la dimisión de Celáa y anuncia que se sumarán al recurso del PP al Tribunal Constitucional
+
+######
+
+"""Es una tropelía inadmisible"", ha dicho Edmundo Bal sobre la eliminación en el texto del castellano como vehicular."
+
+######
+
+"El portavoz de Ciudadanos en el Congreso de los Diputados, Edmundo Bal, ha anunciado que su partido pedirá este mismo viernes la dimisión de la ministra de Educación, Isabel Celáa, en la comisión de Educación y Formación Profesional en la que el secretario de Estado dará cuenta de la aportación de los Presupuestos en su departamento.En una entrevista en RNE, Bal ha explicado que, de forma paralela, la formación naranja mantiene conversaciones con el Partido Popular para sumarse en un recurso conjunto en el Tribunal Constitucional una vez que se apruebe de forma definitiva la eliminación del castellano como lengua vehicular.Bal se ha expresado así un día después de que la ponencia de la Comisión de Educación del Congreso, grupo de trabajo que analiza, debate y vota las enmiendas al proyecto de reforma de la ley educativa, haya votado a favor de eliminar que el castellano sea considerada una lengua vehicular en el ámbito educativo y una lengua oficial del Estado.La enmienda conjunta del PSOE, Unidas Podemos y ERC (que ha salido adelante por 20 votos a favor, frente a 16 en contra y 1 abstención) suprime de la ley educativa (Disposición Adicional 38) la referencia al castellano como ""lengua oficial del Estado"", así como de ""lenguas vehiculares"" tanto al castellano como las demás lenguas cooficiales.El portavoz de Cs ha lamentado esta ""tropelía inadmisible"" al tiempo que ha criticado que tanto PP como PSOE, durante los 40 años de bipartidismo, no hayan hecho ""más que concesiones al bipartidismo"".Por su parte, el líder del PP, Pablo Casado, se reúne este viernes en Barcelona con entidades que defienden el bilingüismo en Cataluña. Casado ya había avisado que el PP estaba dispuesto a recurrir al Tribunal Constitucional esta norma si al final el Gobierno que lidera Pedro Sánchez y sus socios nacionalistas ""excluyen el castellano como lengua vehicular y liquidan la libertad educativa contra la concertada""."
+
+######
+
+06.11.2020
+
+######
+
+EUROPA PRESS
+
+######
+
+PP,Tribunal Constitucional,Ciudadanos,España,
+
+######
+
+https://www.20minutos.es/noticia/4445762/0/ciudadanos-dimision-celaa-ley-pp-constitucional/

@@ -8,7 +8,6 @@ from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
 
 #Librerías SKLEARN
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
@@ -28,7 +27,8 @@ def string_doc(id, noticias):
     texto = archivo.read().strip()
     return texto
 
-#Remover puntuacion
+##############################################################################
+#Remover puntuación
 def remove_punctuation ( text ):
     return re.sub('[%s]' % re.escape(string.punctuation), ' ', text)
 
@@ -70,6 +70,8 @@ def stemming(data):
         new_text = new_text + " " + stemmer.stem(w)
     return new_text
 
+#############################################################################
+
 #Función Preprocesado de datos
 def preprocess(data):
     data = convert_lower_case(data)
@@ -92,13 +94,14 @@ def texto_procesado(noticias):
         archivo.close()
         processed_text.append(preprocess(texto))
 
-    print('Cantidad de tento procesado: ', len(processed_text))
+    print('Cantidad de texto procesado: ', len(processed_text))
     
     return processed_text
 
 
-#Creación de arreglo de clases
-def crea_clases(clases, processed_text):
+#Creación de clases
+
+def crea_clases(clases, processed_text, despoblacion):
     for i in range(0, len(despoblacion)):
         clases.append("Despoblacion")  # Despoblacion
 

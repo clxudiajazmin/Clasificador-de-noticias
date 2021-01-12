@@ -1,0 +1,25 @@
+Ilusiones mentales | El juego de la ciencia | EL PAÍS
+
+######
+
+Algunos acertijos lógicos son el equivalente mental de los trampantojos e ilusiones ópticas
+
+######
+
+La escurridiza bola negra de la semana pasada dio mucho que hablar (ver comentarios), como era de esperar, pues viene a ser como una versión esquemática del famoso problema de Monty Hall, que en su día provocó acaloradas polémicas y que en esta misma sección suscitó -literalmente- miles de comentarios. Ello se debe a que el planteamiento provoca un curioso tipo de “ilusión mental” que lleva a la mayoría de la gente a razonar de la siguiente manera:“Si he sacado una bola negra, obviamente queda descartada la caja con dos bolas blancas, así que esta es la caja con dos bolas negras o la que contiene una blanca y una negra; en el primer caso hay otra bola negra y en el segundo caso la bola que queda es blanca; la probabilidad de haber escogido una u otra de estas dos cajas es la misma y, por tanto, la probabilidad de que la otra bola sea negra es 1/2”.El razonamiento parece impecable, y sin embargo es erróneo, puesto que si saco una bola negra, es más probable que la caja sea la que contiene dos negras. La forma correcta de razonar es la siguiente:“Hay tres bolas negras, así que esta puede ser la de la caja con una blanca y una negra, una de las de la caja con dos negras o la otra de dicha caja; de estas tres posibilidades equiprobables, una corresponde a la primera caja y dos a la segunda, por lo que la probabilidad de que la otra bola sea negra es el doble que la de que sea blanca y, en consecuencia, la probabilidad pedida es 2/3”.Las “ilusiones mentales” -que así podríamos llamarlas por analogía con las ilusiones ópticas- son variadas y frecuentes, y en ellas se basan muchos acertijos lógicos, algunos muy simples y otros no tanto.Un clásico aparentemente trivial, pero que confunde a mucha gente:Un ladrillo pesa un kilo más medio ladrillo, ¿cuánto pesa el ladrillo?Es frecuente que la apresurada respuesta sea “un kilo y medio”. En este caso nos confunde la construcción de la frase, que parece contener la respuesta: “Un ladrillo pesa un kilo más medio…”. Sin darnos cuenta, entresacamos mentalmente las palabras “un kilo más medio”, y un kilo más medio es un kilo y medio.Otro clásico en la misma línea, aún más simple, pero desconcertante para los más ingenuos o despistados:Una botella y su tapón valen un euro y 10 céntimos, y la botella vale un euro más que el tapón, ¿cuánto vale la botella?Tenemos un elemento grande, la botella, y uno pequeño, el tapón, y por otro lado una moneda grande, un euro, y una pequeña, 10 céntimos, por lo que es casi automático emparejarlos, grande con grande y pequeño con pequeña, con lo que a menudo la irreflexiva respuesta es: un euro.Formalmente similar, pero menos ingenuo, este que nos propone nuestro infatigable comentarista Luca Tanganelli:Tenemos 100 kilos de patatas cuya masa contiene un 99% de agua. Las deshidratamos hasta que contengan un 98% de agua. ¿Cuánto pesan ahora?Como vimos, nuestro viajero silencioso de hace un par de semanas puso sobre el mostrador cinco monedas de 20 céntimos para que el taquillero supiera que quería el billete de ida y vuelta sin necesidad de decírselo. Es un sencillo ejemplo de que a veces parecen imprescindibles datos que en realidad no son necesarios.Como este otro clásico de las ilusiones mentales, no tan sencillo, en el que parecen faltar datos:El orificio cilíndrico de una cuenta esférica de oro (que la atraviesa de parte a parte y pasando por el centro, como es habitual) mide 6 milímetros de longitud. ¿Cuánto pesa la cuenta?Carlo Frabetti es escritor y matemático, miembro de la Academia de Ciencias de Nueva York. Ha publicado más de 50 obras de divulgación científica para adultos, niños y jóvenes, entre ellos ‘Maldita física’, ‘Malditas matemáticas’ o ‘El gran juego’. Fue guionista de ‘La bola de cristal’.Puedes seguir a Materia en Facebook, Twitter, Instagram o suscribirte aquí a nuestra newsletter
+
+######
+
+2020-11-06
+
+######
+
+Carlo Frabetti
+
+######
+
+Ciencia, Matemáticas, Juego, Ilusiones ópticas, 
+
+######
+
+https://elpais.com/ciencia/2020-11-06/ilusiones-mentales.html

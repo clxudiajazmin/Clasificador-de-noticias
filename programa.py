@@ -9,7 +9,11 @@ noticias = []
 ingresar_noticias("despoblación/*.txt", noticias)
 ingresar_noticias("no_despoblación/*.txt", noticias)
 
-#Noticias de prueba
+despoblacion = []
+ingresar_noticias("despoblación/*.txt", despoblacion)
+
+
+
 nuevas = []
 ingresar_noticias("unlabeled/*.txt", nuevas)
 
@@ -20,7 +24,7 @@ processed_text_nuevas = texto_procesado(nuevas)
 
 #Creación de arreglo de clases
 clases = []
-clases = crea_clases(clases, processed_text)
+clases = crea_clases(clases, processed_text, despoblacion)
 
 #TFIDF_noticias
 X_traincv = tfid(processed_text, cv)
@@ -45,4 +49,5 @@ print("La noticia:\n", noticia)
 print("\n según Decision Tree es de ", pred_tree)
 print("\n según Naive Bayes es de ", pred_naive)
 print("\n según Random Forest es de ", pred_random)
+print("\n", nuevas[0])
 

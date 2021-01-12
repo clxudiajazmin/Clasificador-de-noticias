@@ -1,0 +1,25 @@
+¿Cuál es el número anterior a infinito? | Las científicas responden | EL PAÍS
+
+######
+
+El infinito no es un número, es un concepto, y además hay muchas clases
+
+######
+
+Supongo que la pregunta viene de que te han explicado los números naturales: 1, 2, 3, 4, 5… y te han dicho que hay infinitos números naturales. Y claro, has pensado que el infinito es un número y que delante de él debe haber otro. Pero el infinito no es un número, es un concepto y además hay muchas clases de infinito.El infinito es un concepto matemático. Y tienes que saber que en la vida real no hay nada infinito. Cuando a veces decimos que algo es infinito es porque usamos la metáfora del infinito para hablar de cosas muy grandes. Pero es un concepto que en la realidad no es material, es ideal, no se concreta en nada real. Nosotros solo convivimos con cosas finitas.Los números naturales, que son los de contar: 1, 2, 3, 4, 5, 6…, no se terminan nunca, hay infinitos números naturales. Eso sí puedes entenderlo. Si fueran finitos habría un número que sería el último. Pero al último número natural siempre le puedes sumar 1 y ya hay otro más. Y así siempre, infinitas veces.Lo que quiero que entiendas es que el infinito no solo es un concepto sino que además es un concepto muy complejo. Para que te hagas una idea, la aparición del concepto de infinito hizo que las matemáticas tuvieran una evolución enorme. Por ejemplo, uno de los conceptos que necesita la noción de infinito en matemáticas es la idea de límite, de acercarme a algo aunque no lo alcance nunca, pero me puedo acercar indefinidamente y tan cerca como quiera. El concepto de límite de una función en matemáticas existe porque existe el concepto de infinito. Si no fuera por eso, no existiría. Lo finito no tiende a nada, no se acerca a nada.También es importante que sepas que hay muchas clases de infinito. El infinito de los números naturales, los que te explicaba que son los de contar, no es el mismo que el infinito de los números reales, por ejemplo. Los números reales son los de la recta real: los naturales que como te he dicho antes son los de contar (1, 2, 3, 4…); los enteros que son los naturales, el 0 y los negativos, es decir, los naturales están contenidos en los enteros; después están los racionales que son un cociente entre un número entero y un número natural, son los que se escriben como p/q, por ejemplo ½ o ¾ son números racionales y los enteros están contenidos en los racionales porque si coges -5 partido por 1, cumple la regla por lo que es un número racional. En matemáticas parecía que esos podían ser todos los números. Pero hay sucesiones de números racionales que se acercan, con el concepto de límite del que hablábamos antes, a números que no son necesariamente racionales. Los números reales son, por tanto, los racionales y esos límites que no son racionales, por ejemplo ?2 o el número ?. Es fácil probar que esos números no son racionales porque no se pueden escribir como un cociente de un número entero y un número natural. Esos son los números reales, los racionales y los límites de los números reales a los que llamamos irracionales.Pues bien, la cantidad de números reales es también infinita pero es un infinito más grande que el de los números naturales. Los naturales se pueden numerar de una cierta manera pero los reales, no, son muchos más. Podríamos decir que hay diversos niveles de infinitos. El de los naturales es el infinito más pequeño que hay y el siguiente estadio de infinito es el de los números reales que es mucho mayor.Marta Macho Stadler es matemática, profesora de Geometría y Topología en la Universidad del País Vasco y especialista en teoría geométrica de foliaciones y geometría no conmutativa.Pregunta enviada vía email por Víctor Villa Coca (4º Primaria)Nosotras respondemos es un consultorio científico semanal, patrocinado por la Fundación Dr. Antoni Esteve y el programa L’Oréal-Unesco ‘For Women in Science’, que contesta a las dudas de los lectores sobre ciencia y tecnología. Son científicas y tecnólogas, socias de AMIT (Asociación de Mujeres Investigadoras y Tecnólogas), las que responden a esas dudas. Envía tus preguntas a nosotrasrespondemos@gmail.com o por Twitter #nosotrasrespondemos.Coordinación y redacción: Victoria Toro
+
+######
+
+2020-11-03
+
+######
+
+Marta Macho Stadler
+
+######
+
+Matemáticas, Ciencia, Científicos, 
+
+######
+
+https://elpais.com/ciencia/2020-11-03/cual-es-el-numero-anterior-a-infinito.html
