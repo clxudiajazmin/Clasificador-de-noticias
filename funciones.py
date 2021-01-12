@@ -1,20 +1,27 @@
+#Librerías
 import glob
 import numpy as np
+
+#Librerías NLTK
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
+
+#Librerías SKLEARN
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 
+despoblacion = []
+ingresar_noticias("despoblación/*.txt", despoblacion)
 
 #Ingresar txt a dataset
 def ingresar_noticias(direccion, dataset):
     for ficheroIN in (glob.glob(direccion)):
         dataset.append(ficheroIN)
 
-#Muestro el documento
+#Imprimir el documento
 def string_doc(id, noticias):
     archivo = open(noticias[id], "r", encoding='utf-8', errors='ignore')
     texto = archivo.read().strip()
@@ -30,7 +37,6 @@ def remove_punctuation ( text ):
 def convert_lower_case(data):
     return np.char.lower(data)
 
-
 #Remover lista de parada
 def remove_stop_words(data):
     stop_words = stopwords.words('spanish')
@@ -41,8 +47,7 @@ def remove_stop_words(data):
             new_text = new_text + " " + w
     return new_text
 
-
-#Quitar puntuación
+#Quitar puntuacion
 def remove_punctuation(data):
     symbols = "!\"#$%&()*+-./:;<=>?@[\]^_`{|}~\n"
     for i in range(len(symbols)):
@@ -51,11 +56,9 @@ def remove_punctuation(data):
     data = np.char.replace(data, ',', '')
     return data
 
-
 #Quitar apostrofe
 def remove_apostrophe(data):
     return np.char.replace(data, "'", "")
-
 
 #Stem
 def stemming(data):
@@ -84,13 +87,11 @@ def preprocess(data):
 
 #Texto procesado
 def texto_procesado(noticias):
-    cont = 0
     processed_text = []
     for i in range(len(noticias)):
         archivo = open(noticias[i], "r", encoding='utf-8', errors='ignore')
         texto = archivo.read().strip()
         archivo.close()
-        cont = cont +1
         processed_text.append(preprocess(texto))
 
     print('Cantidad de texto procesado: ', len(processed_text))
