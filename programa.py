@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from funciones import ingresar_noticias, texto_procesado, crea_clases, tfid, naive_bayes, decision_tree, \
-    string_doc, prediccion, ramdonforest, tfid_fit, test_score, matrizconf, datos_test, accuracy
+    string_doc, prediccion, ramdonforest, tfid_fit, test_score, matrizconf, datos_test, accuracy, guardar_modelo, cargar_modelo
 
 #TFIDF Vectorizer
 cv = TfidfVectorizer()
@@ -70,9 +70,13 @@ matrizconf(Y_true_random, Y_pred_random)
 
 #TFIDF_prueba
 X_testcv = tfid_fit(processed_text_nuevas, cv)
+guardar_modelo('modelos/tree', tree)
 
+modelo = cargar_modelo('modelos/tree.pk1')
+pred_tree = prediccion(modelo, X_testcv[0])
+print("\n según Decision Tree es de ", pred_tree)
 
-
+'''
 #Predicción
 pred_tree = prediccion(tree, X_testcv[0])
 pred_naive = prediccion(naive, X_testcv[0])
@@ -86,4 +90,4 @@ print("\n según Decision Tree es de ", pred_tree)
 print("\n según Naive Bayes es de ", pred_naive)
 print("\n según Random Forest es de ", pred_random)
 print("\n", nuevas[0])
-
+'''

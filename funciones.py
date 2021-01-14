@@ -1,6 +1,7 @@
 #Librerías
 import glob
 import numpy as np
+import pickle
 
 #Librerías NLTK
 from nltk.tokenize import word_tokenize
@@ -163,6 +164,16 @@ def accuracy(y_true_dt,y_pred_dt):
 def prediccion(modelo, noticia):
     pred = modelo.predict(noticia)
     return pred
+
+#Guardar modelo
+def guardar_modelo(direccion, modelo):
+    with open(direccion+'.pk1', 'wb') as f:
+        pickle.dump(modelo, f)
+
+def cargar_modelo(direccion):
+    with open(direccion, 'rb') as f:
+        modelo = pickle.load(f)
+    return modelo
 
 
 
