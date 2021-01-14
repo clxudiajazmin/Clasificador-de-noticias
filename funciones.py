@@ -12,9 +12,9 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.model_selection import cross_validate
 
-despoblacion = []
-ingresar_noticias("despoblación/*.txt", despoblacion)
 
 #Ingresar txt a dataset
 def ingresar_noticias(direccion, dataset):
@@ -105,7 +105,7 @@ def crea_clases(clases, processed_text, despoblacion):
     for i in range(0, len(despoblacion)):
         clases.append("Despoblacion")  # Despoblacion
 
-    for i in range(185, len(processed_text)):
+    for i in range(len(despoblacion), len(processed_text)):
         clases.append("No despoblacion")  # No despoblacion
     
     le = preprocessing.LabelEncoder()
@@ -122,6 +122,7 @@ def tfid_fit(processed_text, cv):
     X_traincv = cv.transform(processed_text)
     return X_traincv
 
+
 #Naive Bayes
 def naive_bayes(X_traincv, clases):
     mnb = MultinomialNB()
@@ -129,7 +130,7 @@ def naive_bayes(X_traincv, clases):
     return mnb
 
 #Decision Tree Classifier
-def decision_tree(X_traincv, clases):
+def decision_tree(X_traincv,  clases):
     tree = DecisionTreeClassifier(random_state=0)
     tree.fit(X_traincv, clases)
     return tree
@@ -140,6 +141,28 @@ def ramdonforest(X_traincv, clases):
     random_forest.fit(X_traincv, clases)
     return random_forest
 
+#Test Score
+def test_score(modelo, X_traincv,  clases):
+    val_cruzada = cross_validate(modelo, X_traincv, clases, cv=3)
+    print(val_cruzada['test_score'])
+
+#Creación de datos a testear
+def datos_test(Y_test, modelo, X_test):
+    y_true_dt, y_pred_dt = Y_test, modelo.predict(X_test)
+    return y_true_dt, y_pred_dt
+
+#Matriz de confusión
+def matrizconf(y_true_dt,y_pred_dt):
+    print(confusion_matrix(y_true_dt, y_pred_dt))
+
+#Accuracy
+def accuracy(y_true_dt,y_pred_dt):
+    print(accuracy_score(y_true_dt, y_pred_dt) * 100)
+
+#Resultado de modelo
 def prediccion(modelo, noticia):
     pred = modelo.predict(noticia)
     return pred
+
+
+
