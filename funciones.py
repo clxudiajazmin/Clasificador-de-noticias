@@ -13,7 +13,6 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
-from sklearn.model_selection import cross_validate
 from sklearn.neighbors import KNeighborsClassifier
 
 
@@ -144,8 +143,7 @@ def knn(X_traincv, clases):
 
 #Test Score
 def test_score(modelo, X_traincv,  clases):
-    val_cruzada = cross_validate(modelo, X_traincv, clases, cv=3)
-    print(val_cruzada['test_score'])
+    print(modelo.score(X_traincv,  clases))
 
 #Creación de datos a testear
 def datos_test(Y_test, modelo, X_test):

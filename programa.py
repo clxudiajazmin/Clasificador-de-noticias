@@ -76,8 +76,9 @@ modelo = cargar_modelo('modelos/tree.pk1')
 pred_tree = prediccion(modelo, X_testcv[0])
 print("\n según Decision Tree es de ", pred_tree)
 
-'''
+
 #Predicción
+print("\n###################### PREDICCION ###############################\n")
 pred_tree = prediccion(tree, X_testcv[0])
 pred_naive = prediccion(naive, X_testcv[0])
 pred_knn = prediccion(knn, X_testcv[0])
@@ -85,9 +86,8 @@ pred_knn = prediccion(knn, X_testcv[0])
 #Impresión de noticia
 noticia = string_doc(0, nuevas)
 
-print("La noticia:\n", noticia)
 print("\n según Decision Tree es de ", pred_tree)
 print("\n según Naive Bayes es de ", pred_naive)
 print("\n según Knn es de ", pred_knn)
 print("\n", nuevas[0])
-'''
+
