@@ -12,9 +12,9 @@ from nltk.stem import SnowballStemmer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.model_selection import cross_validate
+from sklearn.neighbors import KNeighborsClassifier
 
 
 #Ingresar txt a dataset
@@ -137,10 +137,10 @@ def decision_tree(X_traincv,  clases):
     return tree
 
 #RandomForest
-def ramdonforest(X_traincv, clases):
-    random_forest = RandomForestClassifier(random_state=0)
-    random_forest.fit(X_traincv, clases)
-    return random_forest
+def knn(X_traincv, clases):
+    knn = KNeighborsClassifier(n_neighbors=3)
+    knn.fit(X_traincv, clases)
+    return knn
 
 #Test Score
 def test_score(modelo, X_traincv,  clases):
