@@ -1,16 +1,15 @@
 import sys
-from funciones import ingresar_noticias, texto_procesado, crea_clases, tfid, naive_bayes, decision_tree, \
-    string_doc, prediccion, knn, tfid_fit, test_score, matrizconf, datos_test, accuracy, guardar_modelo, cargar_modelo
 from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 
 #inicializar UI
-class initial():
-    def _init_(self):
-        super(initial.self)._init_()
+class initial(QDialog):
+    def __init__(self):
+        super(initial,self).__init__()
         loadUi("main.ui", self)
         #definir elementos de la UI y acciones/funciones asociadas
-
+        """
         #Tab entrenamiento
         #=================
         #btn add files entrenamiento
@@ -36,7 +35,7 @@ class initial():
         self.testBtn.clicked #?
         #frame resultados testeo
         self.testFrame #?
-
+        """
 #inicializar app
 app=QtWidgets.QApplication(sys.argv)
 #crear instancia clase initial
