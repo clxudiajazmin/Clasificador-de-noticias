@@ -334,21 +334,21 @@ border:black
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="comparModelsBtn">
+                 <widget class="QPushButton" name="trainingModelNB">
                   <property name="text">
-                   <string>Comparativa de modelos</string>
+                   <string>Entrenamiento Naive Bayes</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="trainingModel1Btn">
+                 <widget class="QPushButton" name="trainingModelKnn">
                   <property name="text">
                    <string>Entrenamiento KNN-Means</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="trainingModel2Btn">
+                 <widget class="QPushButton" name="trainingModelAD">
                   <property name="text">
                    <string>Entrenamiento Arboles Decision</string>
                   </property>

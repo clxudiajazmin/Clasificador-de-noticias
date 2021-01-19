@@ -33,7 +33,7 @@ def remove_punctuation ( text ):
     return re.sub('[%s]' % re.escape(string.punctuation), ' ', text)
 
 
-#Pasar todo a minúsculas
+#Pasartodo a minúsculas
 def convert_lower_case(data):
     return np.char.lower(data)
 
@@ -75,7 +75,6 @@ def stemming(data):
 #Función Preprocesado de datos
 def preprocess(data):
     data = convert_lower_case(data)
-    data = remove_punctuation(data)
     data = remove_apostrophe(data)
     data = remove_stop_words(data)
     data = stemming(data)
@@ -86,8 +85,7 @@ def preprocess(data):
     return data
 
 #Texto procesado
-def texto_procesado(noticias):
-    processed_text = []
+def texto_procesado(processed_text, noticias):
     for i in range(len(noticias)):
         archivo = open(noticias[i], "r", encoding='utf-8', errors='ignore')
         texto = archivo.read().strip()
@@ -102,6 +100,7 @@ def texto_procesado(noticias):
 #Creación de clases
 
 def crea_clases(clases, processed_text, despoblacion):
+    print("Creo clases")
     for i in range(0, len(despoblacion)):
         clases.append("Despoblacion")  # Despoblacion
 
