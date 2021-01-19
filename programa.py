@@ -6,7 +6,6 @@ from funciones import ingresar_noticias, texto_procesado, crea_clases, tfid, nai
 #TFIDF Vectorizer
 cv = TfidfVectorizer()
 
-
 #Noticias
 noticias = []
 ingresar_noticias("despoblación/*.txt", noticias)
@@ -22,8 +21,9 @@ ingresar_noticias("unlabeled/*.txt", nuevas)
 
 #Procesamiento de texto
 processed_text = []
-processed_text = texto_procesado(noticias)
-processed_text_nuevas = texto_procesado(nuevas)
+processed_text_nuevas = []
+texto_procesado(processed_text,noticias)
+texto_procesado(processed_text_nuevas, nuevas)
 
 #Creación de arreglo de clases
 clases = []
@@ -67,7 +67,7 @@ print("\nDecision Tree: ")
 matrizconf(Y_true_tree, Y_pred_tree)
 print("\nK-nn: ")
 matrizconf(Y_true_knn, Y_pred_knn)
-
+'''
 #TFIDF_prueba
 X_testcv = tfid_fit(processed_text_nuevas, cv)
 guardar_modelo('modelos/tree', tree)
@@ -91,3 +91,4 @@ print("\n según Naive Bayes es de ", pred_naive)
 print("\n según Knn es de ", pred_knn)
 print("\n", nuevas[0])
 
+'''

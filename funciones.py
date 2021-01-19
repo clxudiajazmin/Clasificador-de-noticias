@@ -1,6 +1,5 @@
 #Librerías
 import glob
-import re
 import numpy as np
 import pickle
 
@@ -34,7 +33,7 @@ def remove_punctuation ( text ):
     return re.sub('[%s]' % re.escape(string.punctuation), ' ', text)
 
 
-#Pasar todo a minúsculas
+#Pasartodo a minúsculas
 def convert_lower_case(data):
     return np.char.lower(data)
 
@@ -76,7 +75,6 @@ def stemming(data):
 #Función Preprocesado de datos
 def preprocess(data):
     data = convert_lower_case(data)
-    data = remove_punctuation(data)
     data = remove_apostrophe(data)
     data = remove_stop_words(data)
     data = stemming(data)
@@ -87,24 +85,22 @@ def preprocess(data):
     return data
 
 #Texto procesado
-def texto_procesado(noticias):
-    processed_text = []
-    for i in range (len(noticias)):
+def texto_procesado(processed_text, noticias):
+    for i in range(len(noticias)):
         archivo = open(noticias[i], "r", encoding='utf-8', errors='ignore')
         texto = archivo.read().strip()
         archivo.close()
         processed_text.append(preprocess(texto))
-        #print(i  , '\t', len(noticias)  , ' \n')
 
-    #print('Cantidad de texto procesado: ', len(processed_text))
-    print('Exito')
+    print('Cantidad de texto procesado: ', len(processed_text))
+    
     return processed_text
 
 
 #Creación de clases
 
-def crea_clases(processed_text, despoblacion):
-    clases = []
+def crea_clases(clases, processed_text, despoblacion):
+    print("Creo clases")
     for i in range(0, len(despoblacion)):
         clases.append("Despoblacion")  # Despoblacion
 
@@ -138,7 +134,7 @@ def decision_tree(X_traincv,  clases):
     tree.fit(X_traincv, clases)
     return tree
 
-#KNN
+#RandomForest
 def knn(X_traincv, clases):
     knn = KNeighborsClassifier(n_neighbors=3)
     knn.fit(X_traincv, clases)
