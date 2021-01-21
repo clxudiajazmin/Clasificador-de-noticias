@@ -51,15 +51,35 @@ class initial(QDialog):
         #frame resultados testeo
         self.testFrame #?
         """
-
+        #Btn Insertar datos entrenamiento
         self.trainingAddFilesBtn.clicked.connect(self.insertarNoticiasEntrenamiento)
+        
+        #Btn Preprocesamiento de texto
+        self.procesarTextoBtn.clicked.connect(self.procesarTexto)
+        
+        #ComboBox selector de Modelo a entrenar
+        #self.chooseModelComboBox.activated.connect(self.elegirModeloEntrenamiento)
+        #añadir elementos al comboBox y sus valores asociados
+        self.chooseModelComboBox.addItem("KNN",1)
+        self.chooseModelComboBox.addItem("Naive Bayes",2)
+        self.chooseModelComboBox.addItem("Decision Tree",3)
+        
+        #Btn para entrenar el modelo seleccionado
+        self.trainModelBtn.clicked.connect(self.entrenarModelo)
+        
+        #Btn Insertar Datos Testeo
         self.testingFilesBtn.clicked.connect(self.insertarNoticiasTesteo)
 
-        self.trainingModelNB.clicked.connect(self.entrenamientoNaiveBayes)
-        self.trainingModelAD.clicked.connect(self.entrenamientoArbolDecision)
-        self.trainingModelKnn.clicked.connect(self.entrenamientoKnn)
+        #Btn Seleccionar Modelo
+        self.selectTestModelBtn.clicked.connect(self.elegirModeloTesteo)
 
+        #Btn Ejecutar Testeo
+        #self.testBtn.clicked.connect(self.funcionquenoexisteaunjaja)
 
+    #funciones
+    #=========
+    
+    # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamiento(self):
         #Noticias
         ingresar_noticias("despoblación/*.txt", noticias)
@@ -67,13 +87,26 @@ class initial(QDialog):
 
         ingresar_noticias("despoblación/*.txt", despoblacion)
 
+        #cambiar self.procesarTextoBtn a habilitado
+        self.procesarTextoBtn.setEnabled(True)
 
+
+    def procesarTexto(self):
         #Procesamiento de texto
         texto_procesado(processed_text_entrenamiento, noticias)
 
         #Creación de arreglo de clases
         crea_clases(clases, processed_text_entrenamiento, despoblacion)
         print(clases[len(despoblacion)+10])
+
+        #cambiar self.trainModelBtn a habilitado
+        self.trainModelBtn.setEnabled(True)
+
+
+    #def elegirModeloEntrenamiento(self,index):
+        #tomar valor actual del comboBox
+     #   modelSelect = self.chooseModelComboBox.itemData(index)
+
 
     def insertarNoticiasTesteo(self):
         #Noticias
@@ -82,6 +115,12 @@ class initial(QDialog):
 
         #Procesamiento de texto
         texto_procesado(processed_text_testeo, nuevas)
+
+
+    def elegirModeloTesteo(self):
+        #abrir ventana de diálogo para seleccionar archivo de modelo
+        asdf=1
+
 
     def entrenamientoNaiveBayes(self):
         # Proceso TFIDF
@@ -128,6 +167,7 @@ class initial(QDialog):
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_tree, Y_pred_tree)
     
+
     def entrenamientoKnn(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -153,6 +193,21 @@ class initial(QDialog):
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_knn, Y_pred_knn)
 
+    def entrenarModelo(self,index):
+        #juntar todas las funciones de entrenamiento y conrolarlas en funcion del valor del comboBox
+
+        #tomar valor actual del comboBox
+        modelSelect = self.chooseModelComboBox.itemData(index)
+        print( "opcion seleccionada:",modelSelect)
+        #no existe switch en python (o.o)
+        if modelSelect == 1:
+            self.entrentrenamientoKnn()
+
+        if modelSelect == 2:
+            self.entrenamientoNaiveBayes()
+
+        if modelSelect == 3:
+            self.entrenamientoArbolDecision()
 
 
 

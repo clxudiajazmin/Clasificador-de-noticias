@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>854</width>
-    <height>409</height>
+    <width>1051</width>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -273,7 +273,7 @@ QTabBar::tab
 QTabBar::tab:selected, 
 QTabBar::tab:hover 
 {
-    border-top-color: #black;
+    border-top-color: black;
     border-color: #40494E;
     color: #fff;
     background:#394a41; 
@@ -290,6 +290,36 @@ QTabBar::tab:hover
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Palatino Linotype</family>
+          <pointsize>18</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="plainText">
+         <string>Proyecto de Computación I</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QFrame" name="frame_4">
         <property name="frameShape">
@@ -334,7 +364,7 @@ border:black
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton">
+                 <widget class="QPushButton" name="procesarTextoBtn">
                   <property name="enabled">
                    <bool>false</bool>
                   </property>
@@ -354,26 +384,6 @@ border:black
                     <height>30</height>
                    </size>
                   </property>
-                  <item>
-                   <property name="text">
-                    <string>Proceso TFIDF</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Naive Bayes</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Decision Tree</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>KNN</string>
-                   </property>
-                  </item>
                  </widget>
                 </item>
                 <item>
@@ -436,7 +446,7 @@ border:black
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_2">
+                 <widget class="QPushButton" name="selectTestModelBtn">
                   <property name="text">
                    <string>Seleccionar Modelo</string>
                   </property>
