@@ -94,6 +94,8 @@ class initial(QDialog):
         #cambiar self.procesarTextoBtn a habilitado
         self.procesarTextoBtn.setEnabled(True)
 
+        #cambiar self.trainModelBtn a habilitado
+        self.trainModelBtn.setEnabled(True)
 
     def procesarTexto(self):
         #cambiar texto en self.stepTipsField
@@ -102,17 +104,16 @@ class initial(QDialog):
         #Procesamiento de texto
         texto_procesado(processed_text_entrenamiento, noticias)
 
-
         #Creación de arreglo de clases
         crea_clases(clases, processed_text_entrenamiento, despoblacion)
         #print(clases[len(despoblacion)+10])
+
 
     def openDialogBox(self):
         filenames = QFileDialog.getOpenFileNames()
         return filenames[0]
 
-        #cambiar self.trainModelBtn a habilitado
-        self.trainModelBtn.setEnabled(True)
+    
 
 
     #def elegirModeloEntrenamiento(self,index):
