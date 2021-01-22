@@ -55,7 +55,7 @@ class initial(QDialog):
         self.trainingAddFilesBtn.clicked.connect(self.insertarNoticiasEntrenamiento)
 
         #Btn Preprocesamiento de texto
-        self.procesarTextoBtn.clicked.connect(self.procesarTexto)
+        self.procesarTextoBtn.clicked.connect(self.procesarTextoEntrenamiento)
 
         #ComboBox selector de Modelo a entrenar
         #self.chooseModelComboBox.activated.connect(self.elegirModeloEntrenamiento)
@@ -80,16 +80,12 @@ class initial(QDialog):
     #=========
 
     # abrir dialog window para seleccionar los datos de entrenamiento
-    def insertarNoticiasEntrenamiento(self):
+    def insertarNoticiasEntrenamientoDespoblacion(self):
         filespaths = self.openDialogBox()
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
-        #Noticias
-        ingresar_noticias(filespaths, noticias)
-
-        ingresar_noticias("despoblación/*.txt", despoblacion)
-
-        #abrir ventana dialogo para seleccionar archivos
-        #CODE HERE
+        
+        noticias.append(filespaths)
+        despoblacion.append(filespaths)
 
         #cambiar self.procesarTextoBtn a habilitado
         self.procesarTextoBtn.setEnabled(True)
@@ -97,7 +93,23 @@ class initial(QDialog):
         #cambiar self.trainModelBtn a habilitado
         self.trainModelBtn.setEnabled(True)
 
-    def procesarTexto(self):
+    def insertarNoticiasEntrenamientoNoDespoblacion(self):
+        filespaths = self.openDialogBox()
+        self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
+        
+        noticias.append(filespaths)
+
+        #cambiar self.procesarTextoBtn a habilitado
+        self.procesarTextoBtn.setEnabled(True)
+
+        #cambiar self.trainModelBtn a habilitado
+        self.trainModelBtn.setEnabled(True)
+
+    def procesarTextoEntrenamiento(self):
+        ingresar_noticias(noticias, noticias)
+
+        ingresar_noticias(despoblacion, despoblacion)
+
         #cambiar texto en self.stepTipsField
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’)")
 
