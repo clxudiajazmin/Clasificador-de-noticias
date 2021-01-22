@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog
 from PyQt5.uic import loadUi
 from funciones import *
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -55,30 +55,36 @@ class initial(QDialog):
         self.trainingAddFilesBtn.clicked.connect(self.insertarNoticiasEntrenamiento)
         self.testingFilesBtn.clicked.connect(self.insertarNoticiasTesteo)
 
-        self.trainingModelNB.clicked.connect(self.entrenamientoNaiveBayes)
-        self.trainingModelAD.clicked.connect(self.entrenamientoArbolDecision)
-        self.trainingModelKnn.clicked.connect(self.entrenamientoKnn)
+        #self.trainingModelNB.clicked.connect(self.entrenamientoNaiveBayes)
+        #self.trainingModelAD.clicked.connect(self.entrenamientoArbolDecision)
+        #self.trainingModelKnn.clicked.connect(self.entrenamientoKnn)
 
 
     def insertarNoticiasEntrenamiento(self):
+        filespaths = self.openDialogBox()
+        
         #Noticias
-        ingresar_noticias("despoblación/*.txt", noticias)
-        ingresar_noticias("no_despoblación/*.txt", noticias)
-
+        ingresar_noticias(filespaths, noticias)
+            
         ingresar_noticias("despoblación/*.txt", despoblacion)
-
 
         #Procesamiento de texto
         texto_procesado(processed_text_entrenamiento, noticias)
 
+
         #Creación de arreglo de clases
         crea_clases(clases, processed_text_entrenamiento, despoblacion)
-        print(clases[len(despoblacion)+10])
+        #print(clases[len(despoblacion)+10])
+
+    def openDialogBox(self):
+        filenames = QFileDialog.getOpenFileNames()
+        return filenames[0]
 
     def insertarNoticiasTesteo(self):
-        #Noticias
+        filepaths = self.openDialogBox()
         
-        ingresar_noticias("unlabeled/*.txt", nuevas)
+        #ingresar noticias
+        ingresar_noticias(filepaths, nuevas)
 
         #Procesamiento de texto
         texto_procesado(processed_text_testeo, nuevas)

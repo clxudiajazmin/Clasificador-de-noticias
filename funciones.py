@@ -18,7 +18,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 #Ingresar txt a dataset
 def ingresar_noticias(direccion, dataset):
-    for ficheroIN in (glob.glob(direccion)):
+    for ficheroIN in (direccion):
         dataset.append(ficheroIN)
 
 #Imprimir el documento
