@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog
+from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QProgressBar
 from PyQt5.uic import loadUi
 from funciones import *
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -84,6 +84,10 @@ class initial(QDialog):
         self.procesarTextoBtn.setEnabled(True)
 
     def procesarTextoEntrenamiento(self):
+
+        #self.progressBar.setMinimun(0)
+        #self.progressBar.setMaximum()
+
         ingresar_noticias(noticias, noticias)
 
         ingresar_noticias(despoblacion, despoblacion)
