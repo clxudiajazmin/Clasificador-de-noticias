@@ -200,12 +200,12 @@ class initial(QDialog):
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_knn, Y_pred_knn)
 
-    def entrenarModelo(self,index):
+    def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
         self.stepTipsField.setPlainText(" Entrenando el modelo seleccionado")
 
         #tomar valor actual del comboBox
-        modelSelect = self.chooseModelComboBox.itemData(index)
+        modelSelect = self.chooseModelComboBox.currentData()
         print( "opcion seleccionada:",modelSelect)
         #no existe switch en python (o.o)
         if modelSelect == 1:
