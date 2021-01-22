@@ -9,6 +9,8 @@ from sklearn.model_selection import train_test_split
 
 noticias = []
 despoblacion = []
+desp = []
+no_despoblacion = []
 
 clases = []
 processed_text_entrenamiento = []
@@ -65,28 +67,26 @@ class initial(QDialog):
 
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamientoDespoblacion(self):
-        filespaths = self.openDialogBox()
+        desp.append(self.openDialogBox())
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
         
-        noticias.append(filespaths)
-        despoblacion.append(filespaths)
-
         #cambiar self.procesarTextoBtn a habilitado
         self.trainingAddFilesBtn2.setEnabled(True)
 
     def insertarNoticiasEntrenamientoNoDespoblacion(self):
-        filespaths = self.openDialogBox()
+        no_despoblacion.append(self.openDialogBox())
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
         
-        noticias.append(filespaths)
 
         #cambiar self.procesarTextoBtn a habilitado
         self.procesarTextoBtn.setEnabled(True)
 
     def procesarTextoEntrenamiento(self):
-        ingresar_noticias(noticias, noticias)
+        ingresar_noticias(desp[0], noticias)
+        ingresar_noticias(no_despoblacion[0], noticias)
 
-        ingresar_noticias(despoblacion, despoblacion)
+
+        ingresar_noticias(desp[0], despoblacion)
 
         #cambiar texto en self.stepTipsField
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’)")
@@ -209,7 +209,7 @@ class initial(QDialog):
         print( "opcion seleccionada:",modelSelect)
         #no existe switch en python (o.o)
         if modelSelect == 1:
-            self.entrentrenamientoKnn()
+            self.entrenamientoKnn()
 
         if modelSelect == 2:
             self.entrenamientoNaiveBayes()
