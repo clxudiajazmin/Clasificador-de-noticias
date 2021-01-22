@@ -81,17 +81,26 @@ class initial(QDialog):
     
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamiento(self):
+        #cambiar texto en self.stepTipsField
+        self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
+
         #Noticias
         ingresar_noticias("despoblación/*.txt", noticias)
         ingresar_noticias("no_despoblación/*.txt", noticias)
 
         ingresar_noticias("despoblación/*.txt", despoblacion)
 
+        #abrir ventana dialogo para seleccionar archivos
+        #CODE HERE
+
         #cambiar self.procesarTextoBtn a habilitado
         self.procesarTextoBtn.setEnabled(True)
 
 
     def procesarTexto(self):
+        #cambiar texto en self.stepTipsField
+        self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’)")
+
         #Procesamiento de texto
         texto_procesado(processed_text_entrenamiento, noticias)
 
@@ -194,7 +203,8 @@ class initial(QDialog):
         matrizconf(Y_true_knn, Y_pred_knn)
 
     def entrenarModelo(self,index):
-        #juntar todas las funciones de entrenamiento y conrolarlas en funcion del valor del comboBox
+        #cambiar texto en self.stepTipsField
+        self.stepTipsField.setPlainText(" Entrenando el modelo seleccionado")
 
         #tomar valor actual del comboBox
         modelSelect = self.chooseModelComboBox.itemData(index)
