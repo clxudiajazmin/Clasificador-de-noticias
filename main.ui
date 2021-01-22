@@ -359,7 +359,17 @@ border:black
                 <item>
                  <widget class="QPushButton" name="trainingAddFilesBtn">
                   <property name="text">
-                   <string>Insertar datos entrenamiento</string>
+                   <string>Insertar primeros datos entrenamiento</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="trainingAddFilesBtn2">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="text">
+                   <string>Insertar segundos datos entrenamiento</string>
                   </property>
                  </widget>
                 </item>
@@ -512,7 +522,7 @@ border:black
             <bool>false</bool>
            </property>
            <property name="plainText">
-            <string notr="true">Consejos para la fase en la que se encuentre.
+            <string notr="true">Bienvendio, aquí podrá encontrar descripciones de cada de los pasos del proceso.
 </string>
            </property>
            <property name="centerOnScroll">

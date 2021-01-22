@@ -24,41 +24,22 @@ class initial(QDialog):
         super(initial,self).__init__()
         loadUi("main.ui", self)
         #definir elementos de la UI y acciones/funciones asociadas
-        """
-        #Tab entrenamiento
-        #=================
-        #btn add files entrenamiento
-        self.trainingAddFilesBtn.clicked.ingresar_noticias()
-        #btn comparar modelos
-        self.comparModelsBtn.clicked# funcion comparar modelos seleccionados
-        #btn entrenar 1er modelo
-        self.trainingModel1Btn.clicked.knn() #poder cambiar de modelo lo mismo? con un comboBox?
-        #btn entrenar 2o modelo
-        self.trainingModel2Btn.clicked.decision_tree() #poder cambiar de modelo lo mismo? con un comboBox?
-        #campo texto explicacion proceso
-        self.stepTipsField #funcion cambiar texto al clickar distintos botones
-        #frame donde mostrar resultados/comparativa de los modelos
-        self.frameModels    #?
 
-        #Tab testeo
-        #=================
-        #btn datos testeo
-        self.testingFilesBtn.clicked.datos_test()
-        #comboBox seleccionar modelo testeo
-        self.testingComboBox    #?
-        #btn ejecutar testeo
-        self.testBtn.clicked #?
-        #frame resultados testeo
-        self.testFrame #?
-        """
-        #Btn Insertar datos entrenamiento
-        self.trainingAddFilesBtn.clicked.connect(self.insertarNoticiasEntrenamiento)
+        #Elementos Tab Entrenamiento
+        #===========================
+
+        #Btn Insertar primeros datos entrenamiento
+        self.trainingAddFilesBtn.clicked.connect(self.insertarNoticiasEntrenamientoDespoblacion)
+
+        #Btn Insertar segundos datos entrenamiento
+        self.trainingAddFilesBtn2.clicked.connect(self.insertarNoticiasEntrenamientoNoDespoblacion)
 
         #Btn Preprocesamiento de texto
         self.procesarTextoBtn.clicked.connect(self.procesarTextoEntrenamiento)
 
         #ComboBox selector de Modelo a entrenar
         #self.chooseModelComboBox.activated.connect(self.elegirModeloEntrenamiento)
+
         #añadir elementos al comboBox y sus valores asociados
         self.chooseModelComboBox.addItem("KNN",1)
         self.chooseModelComboBox.addItem("Naive Bayes",2)
@@ -66,6 +47,9 @@ class initial(QDialog):
 
         #Btn para entrenar el modelo seleccionado
         self.trainModelBtn.clicked.connect(self.entrenarModelo)
+
+        #Elementos Tab Testeo
+        #====================
 
         #Btn Insertar Datos Testeo
         self.testingFilesBtn.clicked.connect(self.insertarNoticiasTesteo)
@@ -88,10 +72,7 @@ class initial(QDialog):
         despoblacion.append(filespaths)
 
         #cambiar self.procesarTextoBtn a habilitado
-        self.procesarTextoBtn.setEnabled(True)
-
-        #cambiar self.trainModelBtn a habilitado
-        self.trainModelBtn.setEnabled(True)
+        self.trainingAddFilesBtn2.setEnabled(True)
 
     def insertarNoticiasEntrenamientoNoDespoblacion(self):
         filespaths = self.openDialogBox()
@@ -101,9 +82,6 @@ class initial(QDialog):
 
         #cambiar self.procesarTextoBtn a habilitado
         self.procesarTextoBtn.setEnabled(True)
-
-        #cambiar self.trainModelBtn a habilitado
-        self.trainModelBtn.setEnabled(True)
 
     def procesarTextoEntrenamiento(self):
         ingresar_noticias(noticias, noticias)
@@ -119,6 +97,9 @@ class initial(QDialog):
         #Creación de arreglo de clases
         crea_clases(clases, processed_text_entrenamiento, despoblacion)
         #print(clases[len(despoblacion)+10])
+
+        #cambiar self.trainModelBtn a habilitado
+        self.trainModelBtn.setEnabled(True)
 
 
     def openDialogBox(self):
