@@ -105,7 +105,7 @@ class initial(QDialog):
         #cambiar self.trainModelBtn a habilitado
         self.trainModelBtn.setEnabled(True)
 
-        self.stepTipsField.setPlainText("El preprocesamiento ha acabado")
+        self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’).\n====================\nEl preprocesamiento ha acabado")
 
     def openDialogBox(self):
         filenames = QFileDialog.getOpenFileNames()
@@ -164,8 +164,8 @@ class initial(QDialog):
         #Guardamos modelo
         now = datetime.now()
         # dd/mm/YY H:M:S
-        dt_string = now.strftime("dia:%d-%m-%Y,hora:%H-%M-%S")
-        print("date and time =", dt_string)    
+        dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
+        print("date and time = ", dt_string)    
         guardar_modelo('modelos/naive_' + dt_string, naive)
 
     def entrenamientoArbolDecision(self):
