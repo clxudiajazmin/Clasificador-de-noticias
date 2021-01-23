@@ -68,7 +68,6 @@ class initial(QDialog):
 
     #funciones
     #=========
-
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamientoDespoblacion(self):
         desp.append(self.openDialogBox())
@@ -112,13 +111,11 @@ class initial(QDialog):
         return filenames[0]
 
     def ejecutarTesteo(self):
-        cargar_modelo(modelopath[0])
-
+        cargar_modelo(modelopath)
 
     #def elegirModeloEntrenamiento(self,index):
         #tomar valor actual del comboBox
      #   modelSelect = self.chooseModelComboBox.itemData(index)
-
 
     def insertarNoticiasTesteo(self):
         filepaths = self.openDialogBox()
@@ -129,16 +126,10 @@ class initial(QDialog):
         #Procesamiento de texto
         texto_procesado(processed_text_testeo, nuevas)
 
-
     def elegirModeloTesteo(self):
         modelopath = []
         modelopath = self.openDialogBox()
         self.testBtn.setEnabled(True)
-
-        
-
-
-
 
     def entrenamientoNaiveBayes(self):
         # Proceso TFIDF
@@ -198,7 +189,6 @@ class initial(QDialog):
         print("date and time =", dt_string)    
         guardar_modelo('modelos/tree_' + dt_string, tree)
 
-
     def entrenamientoKnn(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -231,7 +221,6 @@ class initial(QDialog):
         print("date and time =", dt_string)    
         guardar_modelo('modelos/knn_' + dt_string, modknn)
 
-
     def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
         self.stepTipsField.setPlainText(" Entrenando el modelo seleccionado")
@@ -248,8 +237,6 @@ class initial(QDialog):
 
         if modelSelect == 3:
             self.entrenamientoArbolDecision()
-
-
 
 
 #inicializar app

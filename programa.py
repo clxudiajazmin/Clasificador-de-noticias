@@ -15,7 +15,6 @@ despoblacion = []
 ingresar_noticias("despoblación/*.txt", despoblacion)
 
 
-
 nuevas = []
 ingresar_noticias("unlabeled/*.txt", nuevas)
 
@@ -46,6 +45,7 @@ print("\nDecision Tree: ")
 test_score(tree, X_train, Y_train)
 print("\nK-nn: ")
 test_score(knn, X_train, Y_train)
+
 
 #Creamos los datos a testear
 Y_true_naive, Y_pred_naive = datos_test(Y_test, naive, X_test)
