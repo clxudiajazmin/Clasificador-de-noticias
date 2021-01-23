@@ -18,6 +18,8 @@ processed_text_entrenamiento = []
 processed_text_testeo = []
 
 nuevas = []
+modelopath = []
+
 
 cv = TfidfVectorizer()
 
@@ -40,6 +42,7 @@ class initial(QDialog):
         #Btn Preprocesamiento de texto
         self.procesarTextoBtn.clicked.connect(self.procesarTextoEntrenamiento)
 
+
         #ComboBox selector de Modelo a entrenar
         #self.chooseModelComboBox.activated.connect(self.elegirModeloEntrenamiento)
 
@@ -61,7 +64,7 @@ class initial(QDialog):
         self.selectTestModelBtn.clicked.connect(self.elegirModeloTesteo)
 
         #Btn Ejecutar Testeo
-        #self.testBtn.clicked.connect(self.funcionquenoexisteaunjaja)
+        self.testBtn.clicked.connect(self.ejecutarTesteo)
 
     #funciones
     #=========
@@ -104,11 +107,12 @@ class initial(QDialog):
 
         self.stepTipsField.setPlainText("El preprocesamiento ha acabado")
 
-
     def openDialogBox(self):
         filenames = QFileDialog.getOpenFileNames()
         return filenames[0]
 
+    def ejecutarTesteo(self):
+        cargar_modelo(modelopath[0])
 
 
     #def elegirModeloEntrenamiento(self,index):
@@ -118,7 +122,7 @@ class initial(QDialog):
 
     def insertarNoticiasTesteo(self):
         filepaths = self.openDialogBox()
-
+        nuevas = []
         #ingresar noticias
         ingresar_noticias(filepaths, nuevas)
 
@@ -127,8 +131,13 @@ class initial(QDialog):
 
 
     def elegirModeloTesteo(self):
-        #abrir ventana de diálogo para seleccionar archivo de modelo
-        asdf=1
+        modelopath = []
+        modelopath = self.openDialogBox()
+        self.testBtn.setEnabled(True)
+
+        
+
+
 
 
     def entrenamientoNaiveBayes(self):
