@@ -1,7 +1,9 @@
 import sys
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QProgressBar
+from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QProgressBar, QMainWindow
 from PyQt5.uic import loadUi
+from PyQt5.QtChart import QChart, QChartView, QValueAxis, QBarCategoryAxis, QBarSet, QBarSeries
+from PyQt5.Qt import Qt
 from funciones import *
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -30,6 +32,12 @@ class initial(QDialog):
         loadUi("main.ui", self)
         #definir elementos de la UI y acciones/funciones asociadas
 
+        #creamos sets para mostrar resultados en el barchart
+        self.setKNN = QBarSet('KNN')
+        self.setNBayes = QBarSet('Naive Bayes')
+        self.setDTrees = QBarSet('Decision Tree')
+
+        self.series = QBarSeries()
         #Elementos Tab Entrenamiento
         #===========================
 
@@ -152,7 +160,13 @@ class initial(QDialog):
 
         # Datos de los modelos
         print("###################### Accuracy ###############################\n")
-        accuracy(Y_true_naive, Y_pred_naive)
+        asdf=accuracy(Y_true_naive, Y_pred_naive)
+
+        #incluir nueva accurracy al set de resultados de NaiveBayes
+        self.setNBayes.append(accuracy_score(Y_true_naive, Y_pred_naive) * 100)
+        self.series.append(self.setNBayes)
+        #llamar a funcion para actualizar los valores del Barchart
+        self.appendResults()
 
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_naive, Y_pred_naive)
@@ -161,7 +175,6 @@ class initial(QDialog):
         now = datetime.now()
         # dd/mm/YY H:M:S
         dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
-        print("date and time = ", dt_string)    
         guardar_modelo('modelos/naive_' + dt_string, naive)
 
     def entrenamientoArbolDecision(self):
@@ -182,6 +195,12 @@ class initial(QDialog):
         #Datos de los modelos
         print("###################### Accuracy ###############################\n")
         accuracy(Y_true_tree, Y_pred_tree)
+
+        #incluir nueva accurracy al set de resultados de NaiveBayes
+        self.setDTrees.append(accuracy(Y_true_tree, Y_pred_tree))
+        self.series.append(self.setDTrees)
+        #llamar a funcion para actualizar los valores del Barchart
+        self.appendResults()
 
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
@@ -214,6 +233,12 @@ class initial(QDialog):
         print("###################### Accuracy ###############################\n")
 
         accuracy(Y_true_knn, Y_pred_knn)
+        
+        #incluir nueva accurracy al set de resultados de NaiveBayes
+        self.setKNN.append(accuracy(Y_true_knn, Y_pred_knn))
+        self.series.append(self.setKNN)
+        #llamar a funcion para actualizar los valores del Barchart
+        self.appendResults()
 
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
@@ -242,6 +267,34 @@ class initial(QDialog):
 
         if modelSelect == 3:
             self.entrenamientoArbolDecision()
+
+    def appendResults(self):
+        #add series de todos los modelos procesados
+
+        chart = QChart()
+        chart.addSeries(self.series)
+        chart.setTitle("Precisiones de Modelos")
+        chart.setAnimationOptions(QChart.SeriesAnimations)
+
+        modelosEjeX = ('KNN', 'Naive Bayes', 'Decision Trees')
+
+        ejeX = QBarCategoryAxis()
+        ejeX.append(modelosEjeX)
+
+        ejeY = QValueAxis()
+        ejeY.setRange(0,100)
+
+        chart.addAxis(ejeX,Qt.AlignBottom)
+        chart.addAxis(ejeY,Qt.AlignLeft)
+
+        chart.legend().setVisible(True)
+        chart.legend().setAlignment(Qt.AlignBottom)
+
+        self.chartView = QChartView(chart)
+
+        self.chartView.show()
+
+        #self.graphicsViewModels.(chartView)
 
 
 #inicializar app

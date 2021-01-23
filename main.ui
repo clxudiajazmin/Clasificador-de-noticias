@@ -416,22 +416,6 @@ border:black
                </layout>
               </widget>
              </item>
-             <item>
-              <widget class="QFrame" name="frameModels">
-               <property name="minimumSize">
-                <size>
-                 <width>500</width>
-                 <height>100</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-              </widget>
-             </item>
             </layout>
            </widget>
            <widget class="QWidget" name="tabTest">
