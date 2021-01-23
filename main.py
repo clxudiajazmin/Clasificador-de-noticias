@@ -190,7 +190,7 @@ class initial(QDialog):
 
         now = datetime.now()
         # dd/mm/YY H:M:S
-        dt_string = now.strftime("dia:%d-%m-%Y,hora:%H-%M-%S")
+        dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
         print("date and time =", dt_string)    
         guardar_modelo('modelos/tree_' + dt_string, tree)
 
@@ -222,7 +222,7 @@ class initial(QDialog):
         #Guardamos modelo
         now = datetime.now()
         # dd/mm/YY H:M:S
-        dt_string = now.strftime("dia:%d-%m-%Y,hora:%H-%M-%S")
+        dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
         print("date and time =", dt_string)    
         guardar_modelo('modelos/knn_' + dt_string, modknn)
 
