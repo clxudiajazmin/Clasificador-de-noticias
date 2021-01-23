@@ -111,7 +111,11 @@ class initial(QDialog):
         return filenames[0]
 
     def ejecutarTesteo(self):
-        cargar_modelo(modelopath)
+        modelo = cargar_modelo(modelopath)
+        X_testcv = tfid_fit(processed_text_testeo, cv)
+        pred_tree = prediccion(modelo, X_testcv[0])
+        print("\n según Decision Tree es de ", pred_tree)
+        
 
     #def elegirModeloEntrenamiento(self,index):
         #tomar valor actual del comboBox
@@ -130,6 +134,7 @@ class initial(QDialog):
         modelopath = []
         modelopath = self.openDialogBox()
         self.testBtn.setEnabled(True)
+
 
     def entrenamientoNaiveBayes(self):
         # Proceso TFIDF
