@@ -34,8 +34,11 @@ class initial(QDialog):
 
         #creamos sets para mostrar resultados en el barchart
         self.setKNN = QBarSet('KNN')
+        self.setKNN.append(0)
         self.setNBayes = QBarSet('Naive Bayes')
+        self.setNBayes.append(0)
         self.setDTrees = QBarSet('Decision Tree')
+        self.setDTrees.append(0)
 
         self.series = QBarSeries()
         #Elementos Tab Entrenamiento
@@ -164,7 +167,7 @@ class initial(QDialog):
 
         #incluir nueva accurracy al set de resultados de NaiveBayes
         self.setNBayes.append(accuracy_score(Y_true_naive, Y_pred_naive) * 100)
-        self.series.append(self.setNBayes)
+ 
         #llamar a funcion para actualizar los valores del Barchart
         self.appendResults()
 
@@ -197,8 +200,7 @@ class initial(QDialog):
         accuracy(Y_true_tree, Y_pred_tree)
 
         #incluir nueva accurracy al set de resultados de NaiveBayes
-        self.setDTrees.append(accuracy(Y_true_tree, Y_pred_tree))
-        self.series.append(self.setDTrees)
+        self.setDTrees.append(accuracy_score(Y_true_tree, Y_pred_tree)*100)
         #llamar a funcion para actualizar los valores del Barchart
         self.appendResults()
 
@@ -233,10 +235,9 @@ class initial(QDialog):
         print("###################### Accuracy ###############################\n")
 
         accuracy(Y_true_knn, Y_pred_knn)
-        
+
         #incluir nueva accurracy al set de resultados de NaiveBayes
-        self.setKNN.append(accuracy(Y_true_knn, Y_pred_knn))
-        self.series.append(self.setKNN)
+        self.setKNN.append(accuracy_score(Y_true_knn, Y_pred_knn)*100)
         #llamar a funcion para actualizar los valores del Barchart
         self.appendResults()
 
@@ -269,7 +270,13 @@ class initial(QDialog):
             self.entrenamientoArbolDecision()
 
     def appendResults(self):
+        #clear de series
+        self.series = QBarSeries()
         #add series de todos los modelos procesados
+        
+        self.series.append(self.setKNN)
+        self.series.append(self.setNBayes)
+        self.series.append(self.setDTrees)
 
         chart = QChart()
         chart.addSeries(self.series)
