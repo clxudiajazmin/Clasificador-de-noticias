@@ -5,6 +5,7 @@ from PyQt5.uic import loadUi
 from funciones import *
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
+from datetime import datetime
 
 
 noticias = []
@@ -150,6 +151,12 @@ class initial(QDialog):
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_naive, Y_pred_naive)
 
+        #Guardamos modelo
+        now = datetime.now()
+        # dd/mm/YY H:M:S
+        dt_string = now.strftime("dia:%d-%m-%Y,hora:%H-%M-%S")
+        print("date and time =", dt_string)    
+        guardar_modelo('modelos/naive_' + dt_string, naive)
 
     def entrenamientoArbolDecision(self):
         # Proceso TFIDF
@@ -173,6 +180,13 @@ class initial(QDialog):
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_tree, Y_pred_tree)
+
+
+        now = datetime.now()
+        # dd/mm/YY H:M:S
+        dt_string = now.strftime("dia:%d-%m-%Y,hora:%H-%M-%S")
+        print("date and time =", dt_string)    
+        guardar_modelo('modelos/tree_' + dt_string, tree)
 
 
     def entrenamientoKnn(self):
@@ -199,6 +213,15 @@ class initial(QDialog):
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_knn, Y_pred_knn)
+
+
+        #Guardamos modelo
+        now = datetime.now()
+        # dd/mm/YY H:M:S
+        dt_string = now.strftime("dia:%d-%m-%Y,hora:%H-%M-%S")
+        print("date and time =", dt_string)    
+        guardar_modelo('modelos/knn_' + dt_string, modknn)
+
 
     def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
