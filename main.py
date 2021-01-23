@@ -102,12 +102,13 @@ class initial(QDialog):
         #cambiar self.trainModelBtn a habilitado
         self.trainModelBtn.setEnabled(True)
 
+        self.stepTipsField.setPlainText("El preprocesamiento ha acabado")
+
 
     def openDialogBox(self):
         filenames = QFileDialog.getOpenFileNames()
         return filenames[0]
 
-    
 
 
     #def elegirModeloEntrenamiento(self,index):
@@ -213,7 +214,6 @@ class initial(QDialog):
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_knn, Y_pred_knn)
-
 
         #Guardamos modelo
         now = datetime.now()
