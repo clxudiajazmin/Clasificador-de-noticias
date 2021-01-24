@@ -1,4 +1,6 @@
 import sys
+
+from IPython.external.qt_for_kernel import QtGui
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QProgressBar, QMainWindow
 from PyQt5.uic import loadUi
@@ -10,6 +12,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from datetime import datetime
 from sklearn.feature_extraction.text import CountVectorizer
+import pandas as pd
+import openpyxl
 
 noticias = []
 despoblacion = []
@@ -133,7 +137,6 @@ class initial(QDialog):
 
     def insertarNoticiasTesteo(self):
         filepaths = self.openDialogBox()
-        nuevas = []
         #ingresar noticias
         ingresar_noticias(filepaths, nuevas)
 
@@ -146,10 +149,19 @@ class initial(QDialog):
         modelo = cargar_modelo(modelopath[1])
 
         X_testcv = tfid_fit(processed_text_testeo, cv1)
-        for i in X_testcv:
-            pred = prediccion(modelo, i)
-            print("\n", pred)
 
+        predicciones = []
+
+
+        for i in X_testcv:
+            predicciones.append(prediccion(modelo, i))
+
+        df = pd.DataFrame(data = predicciones, index = nuevas)
+        print(df)
+        archivo = modelopath[0]
+        new_archivo = archivo.replace('modelos', 'resultados')
+        nombre = new_archivo[:len(new_archivo)-3]
+        df.to_excel(nombre + ".xlsx", "Sheet1")
         self.testBtn.setEnabled(True)
 
 
