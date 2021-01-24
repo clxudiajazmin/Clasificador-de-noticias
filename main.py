@@ -5,6 +5,7 @@ from PyQt5.uic import loadUi
 from PyQt5.QtChart import QChart, QChartView, QValueAxis, QBarCategoryAxis, QBarSet, QBarSeries
 from PyQt5.Qt import Qt
 from funciones import *
+from sklearn.metrics import recall_score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from datetime import datetime
@@ -33,12 +34,32 @@ class initial(QDialog):
         #definir elementos de la UI y acciones/funciones asociadas
 
         #creamos sets para mostrar resultados en el barchart
+        """
+        #KNN accurracy
         self.setKNN = QBarSet('KNN')
         self.setKNN.append(0)
+        #KNN recall
+        self.setKNNRecall = QBarSet('KNNRecall')
+        self.setKNNRecall.append(0)
+        #NBayes accurracy
         self.setNBayes = QBarSet('Naive Bayes')
         self.setNBayes.append(0)
+        #NBayes recall
+        self.setNBayesRecall = QBarSet('Naive Bayes')
+        self.setNBayesRecall.append(0)
+        #DTree accurracy
         self.setDTrees = QBarSet('Decision Tree')
         self.setDTrees.append(0)
+        #DTree recall
+        self.setDTreesRecall = QBarSet('Decision Tree')
+        self.setDTreesRecall.append(0)
+        #Inicializar series de QBar
+        self.series = QBarSeries()
+        """
+        self.setRecall = QBarSet("Recalls")
+        self.setRecall.append([0,0,0])
+        self.setAccurracy = QBarSet("Accurracy")
+        self.setAccurracy.append([0,0,0])
 
         self.series = QBarSeries()
         #Elementos Tab Entrenamiento
@@ -163,14 +184,22 @@ class initial(QDialog):
 
         # Datos de los modelos
         print("###################### Accuracy ###############################\n")
-        asdf=accuracy(Y_true_naive, Y_pred_naive)
+        accuracy(Y_true_naive, Y_pred_naive)
 
         #incluir nueva accurracy al set de resultados de NaiveBayes
-        self.setNBayes.append(accuracy_score(Y_true_naive, Y_pred_naive) * 100)
- 
+        #self.setNBayes.append(accuracy_score(Y_true_naive, Y_pred_naive) * 100)
+        #self.setAccurracy[1]=accuracy_score(Y_true_naive, Y_pred_naive) * 100
+        #self.a[1]=accuracy_score(Y_true_naive, Y_pred_naive) * 100
+        
+        self.setAccurracy.replace(1,accuracy_score(Y_true_naive, Y_pred_naive)*100)
         #llamar a funcion para actualizar los valores del Barchart
+        
+        print("####################### Recall ##############################\n")
+        print(recall_score(Y_true_naive, Y_pred_naive, average='macro'))
+        self.setRecall.replace(1,recall_score(Y_true_naive, Y_pred_naive, average='macro')*100)
+        #self.setNBayes.append(recall_score(Y_true_naive, Y_pred_naive, average='macro')*100)
+        #self.setRecall[1] =recall_score(Y_true_naive, Y_pred_naive, average='macro')*100
         self.appendResults()
-
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_naive, Y_pred_naive)
 
@@ -200,10 +229,15 @@ class initial(QDialog):
         accuracy(Y_true_tree, Y_pred_tree)
 
         #incluir nueva accurracy al set de resultados de NaiveBayes
-        self.setDTrees.append(accuracy_score(Y_true_tree, Y_pred_tree)*100)
+        #self.setDTrees.append(accuracy_score(Y_true_tree, Y_pred_tree)*100)
+        self.setAccurracy.replace(2,accuracy_score(Y_true_tree, Y_pred_tree)*100)
         #llamar a funcion para actualizar los valores del Barchart
+        
+        print("####################### Recall ##############################\n")
+        print(recall_score(Y_true_tree,Y_pred_tree, average='macro'))
+        #self.setDTrees.append(recall_score(Y_true_tree, Y_pred_tree, average='macro')*100)
+        self.setRecall.replace(2,recall_score(Y_true_tree, Y_pred_tree, average='macro')*100)
         self.appendResults()
-
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_tree, Y_pred_tree)
@@ -237,10 +271,15 @@ class initial(QDialog):
         accuracy(Y_true_knn, Y_pred_knn)
 
         #incluir nueva accurracy al set de resultados de NaiveBayes
-        self.setKNN.append(accuracy_score(Y_true_knn, Y_pred_knn)*100)
+        #self.setKNN.append(accuracy_score(Y_true_knn, Y_pred_knn)*100)
         #llamar a funcion para actualizar los valores del Barchart
-        self.appendResults()
+        self.setAccurracy.replace(0,accuracy_score(Y_true_knn, Y_pred_knn)*100)
 
+        print("####################### Recall ##############################\n")
+        print(recall_score(Y_true_knn, Y_pred_knn, average='macro'))
+        #self.setDTrees.append(recall_score(Y_true_knn, Y_pred_knn, average='macro')*100)
+        self.setRecall.replace(0,recall_score(Y_true_knn, Y_pred_knn, average='macro')*100)
+        self.appendResults()
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_knn, Y_pred_knn)
@@ -273,10 +312,14 @@ class initial(QDialog):
         #clear de series
         self.series = QBarSeries()
         #add series de todos los modelos procesados
-        
-        self.series.append(self.setKNN)
-        self.series.append(self.setNBayes)
-        self.series.append(self.setDTrees)
+        self.series.append(self.setAccurracy)
+        self.series.append(self.setRecall)
+        #self.series.append(self.setKNN)
+        #self.series.append(self.setKNNRecall)
+        #self.series.append(self.setNBayes)
+        #self.series.append(self.setNBayesRecall)
+        #self.series.append(self.setDTrees)
+        #self.series.append(self.setDTreesRecall)
 
         chart = QChart()
         chart.addSeries(self.series)
@@ -285,11 +328,12 @@ class initial(QDialog):
 
         modelosEjeX = ('KNN', 'Naive Bayes', 'Decision Trees')
 
+        
         ejeX = QBarCategoryAxis()
         ejeX.append(modelosEjeX)
 
         ejeY = QValueAxis()
-        ejeY.setRange(0,100)
+        #ejeY.setRange(0,100)
 
         chart.addAxis(ejeX,Qt.AlignBottom)
         chart.addAxis(ejeY,Qt.AlignLeft)
