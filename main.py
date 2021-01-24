@@ -34,28 +34,7 @@ class initial(QDialog):
         #definir elementos de la UI y acciones/funciones asociadas
 
         #creamos sets para mostrar resultados en el barchart
-        """
-        #KNN accurracy
-        self.setKNN = QBarSet('KNN')
-        self.setKNN.append(0)
-        #KNN recall
-        self.setKNNRecall = QBarSet('KNNRecall')
-        self.setKNNRecall.append(0)
-        #NBayes accurracy
-        self.setNBayes = QBarSet('Naive Bayes')
-        self.setNBayes.append(0)
-        #NBayes recall
-        self.setNBayesRecall = QBarSet('Naive Bayes')
-        self.setNBayesRecall.append(0)
-        #DTree accurracy
-        self.setDTrees = QBarSet('Decision Tree')
-        self.setDTrees.append(0)
-        #DTree recall
-        self.setDTreesRecall = QBarSet('Decision Tree')
-        self.setDTreesRecall.append(0)
-        #Inicializar series de QBar
-        self.series = QBarSeries()
-        """
+
         self.setRecall = QBarSet("Recalls")
         self.setRecall.append([0,0,0])
         self.setAccurracy = QBarSet("Accurracy")
@@ -312,40 +291,38 @@ class initial(QDialog):
         #clear de series
         self.series = QBarSeries()
         #add series de todos los modelos procesados
+
         self.series.append(self.setAccurracy)
         self.series.append(self.setRecall)
-        #self.series.append(self.setKNN)
-        #self.series.append(self.setKNNRecall)
-        #self.series.append(self.setNBayes)
-        #self.series.append(self.setNBayesRecall)
-        #self.series.append(self.setDTrees)
-        #self.series.append(self.setDTreesRecall)
 
         chart = QChart()
+        
         chart.addSeries(self.series)
         chart.setTitle("Precisiones de Modelos")
         chart.setAnimationOptions(QChart.SeriesAnimations)
 
         modelosEjeX = ('KNN', 'Naive Bayes', 'Decision Trees')
 
-        
+        #poner linea transparente por si las flais
+
         ejeX = QBarCategoryAxis()
         ejeX.append(modelosEjeX)
 
         ejeY = QValueAxis()
-        #ejeY.setRange(0,100)
+        ejeY.setMax(100)
+        #ejeY.setRange(0,series.)
 
         chart.addAxis(ejeX,Qt.AlignBottom)
         chart.addAxis(ejeY,Qt.AlignLeft)
-
+        
         chart.legend().setVisible(True)
         chart.legend().setAlignment(Qt.AlignBottom)
 
         self.chartView = QChartView(chart)
-
+        #self.chartView.setRendetHint(QPainter.Antialiasing)
         self.chartView.show()
 
-        #self.graphicsViewModels.(chartView)
+        #intentar meter el chartView dentro de la tab existente de entrenamiento
 
 
 #inicializar app
