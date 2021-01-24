@@ -1,6 +1,5 @@
 import sys
 
-from IPython.external.qt_for_kernel import QtGui
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QProgressBar, QMainWindow
 from PyQt5.uic import loadUi
@@ -13,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from datetime import datetime
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
-import openpyxl
+from openpyxl import Workbook
 
 noticias = []
 despoblacion = []
@@ -116,8 +115,10 @@ class initial(QDialog):
 
         #cambiar self.trainModelBtn a habilitado
         self.trainModelBtn.setEnabled(True)
-
+        
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’).\n====================\nEl preprocesamiento ha acabado")
+        self.procesarTextoBtn.setEnabled(False)
+
 
     def openDialogBox(self):
         filenames = QFileDialog.getOpenFileNames()
@@ -195,8 +196,8 @@ class initial(QDialog):
         print("####################### Recall ##############################\n")
         print(recall_score(Y_true_naive, Y_pred_naive, average='macro'))
         self.setRecall.replace(1,recall_score(Y_true_naive, Y_pred_naive, average='macro')*100)
-        #self.setNBayes.append(recall_score(Y_true_naive, Y_pred_naive, average='macro')*100)
-        #self.setRecall[1] =recall_score(Y_true_naive, Y_pred_naive, average='macro')*100
+        a= "Modelo Naive-Bayes\n==================\nRecall:" + str(recall_score(Y_true_naive, Y_pred_naive, average='macro')) + "\nPrecision: " + str(accuracy_score(Y_true_naive, Y_pred_naive))
+        self.stepTipsField.setPlainText(a)
         self.appendResults()
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_naive, Y_pred_naive)
@@ -238,6 +239,8 @@ class initial(QDialog):
         print(recall_score(Y_true_tree,Y_pred_tree, average='macro'))
         #self.setDTrees.append(recall_score(Y_true_tree, Y_pred_tree, average='macro')*100)
         self.setRecall.replace(2,recall_score(Y_true_tree, Y_pred_tree, average='macro')*100)
+        a= "Modelo Arbol Decision\n=====================\nRecall:" + str(recall_score(Y_true_tree, Y_pred_tree, average='macro')) + "\nPrecision: " + str(accuracy_score(Y_true_tree, Y_pred_tree))
+        self.stepTipsField.setPlainText(a)
         self.appendResults()
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
@@ -274,15 +277,16 @@ class initial(QDialog):
 
         accuracy(Y_true_knn, Y_pred_knn)
 
-        #incluir nueva accurracy al set de resultados de NaiveBayes
-        #self.setKNN.append(accuracy_score(Y_true_knn, Y_pred_knn)*100)
         #llamar a funcion para actualizar los valores del Barchart
         self.setAccurracy.replace(0,accuracy_score(Y_true_knn, Y_pred_knn)*100)
 
         print("####################### Recall ##############################\n")
         print(recall_score(Y_true_knn, Y_pred_knn, average='macro'))
+        
         #self.setDTrees.append(recall_score(Y_true_knn, Y_pred_knn, average='macro')*100)
         self.setRecall.replace(0,recall_score(Y_true_knn, Y_pred_knn, average='macro')*100)
+        a= "Modelo KNN\n===============\nRecall:" + str(recall_score(Y_true_knn, Y_pred_knn, average='macro')) + "\nPrecision: " + str(accuracy_score(Y_true_knn, Y_pred_knn))
+        self.stepTipsField.setPlainText(a)
         self.appendResults()
         #Matriz confusion
         print("\n###################### Matriz de confusion ###############################\n")
@@ -301,7 +305,7 @@ class initial(QDialog):
     def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
         self.stepTipsField.setPlainText(" Entrenando el modelo seleccionado")
-
+        
         #tomar valor actual del comboBox
         modelSelect = self.chooseModelComboBox.currentData()
         print( "opcion seleccionada:",modelSelect)
@@ -337,7 +341,7 @@ class initial(QDialog):
         ejeX.append(modelosEjeX)
 
         ejeY = QValueAxis()
-        ejeY.setMax(100)
+        
         #ejeY.setRange(0,series.)
 
         chart.addAxis(ejeX,Qt.AlignBottom)
@@ -346,9 +350,9 @@ class initial(QDialog):
         chart.legend().setVisible(True)
         chart.legend().setAlignment(Qt.AlignBottom)
 
-        self.chartView = QChartView(chart)
-        #self.chartView.setRendetHint(QPainter.Antialiasing)
-        self.chartView.show()
+        self.QChartView = QChartView(chart)
+        self.QChartView.resize(600,600)
+        self.QChartView.show()
 
         #intentar meter el chartView dentro de la tab existente de entrenamiento
 

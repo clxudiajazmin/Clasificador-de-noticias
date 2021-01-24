@@ -12,7 +12,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>900</width>
+    <width>700</width>
     <height>600</height>
    </size>
   </property>
@@ -409,13 +409,6 @@ border:black
                   </property>
                   <property name="text">
                    <string>Entrenar Modelo</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QProgressBar" name="progressBar">
-                  <property name="value">
-                   <number>24</number>
                   </property>
                  </widget>
                 </item>
