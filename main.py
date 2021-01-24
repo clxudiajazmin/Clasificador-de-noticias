@@ -9,7 +9,7 @@ from sklearn.metrics import recall_score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from datetime import datetime
-
+from sklearn.feature_extraction.text import CountVectorizer
 
 noticias = []
 despoblacion = []
@@ -21,10 +21,8 @@ processed_text_entrenamiento = []
 processed_text_testeo = []
 
 nuevas = []
-modelopath = []
-
-
 cv = TfidfVectorizer()
+vectorizer = CountVectorizer()
 
 #inicializar UI
 class initial(QDialog):
@@ -122,11 +120,12 @@ class initial(QDialog):
         return filenames[0]
 
     def ejecutarTesteo(self):
+        '''
         modelo = cargar_modelo(modelopath)
         X_testcv = tfid_fit(processed_text_testeo, cv)
         pred_tree = prediccion(modelo, X_testcv[0])
         print("\n según Decision Tree es de ", pred_tree)
-        
+        '''
 
     #def elegirModeloEntrenamiento(self,index):
         #tomar valor actual del comboBox
@@ -142,8 +141,15 @@ class initial(QDialog):
         texto_procesado(processed_text_testeo, nuevas)
 
     def elegirModeloTesteo(self):
-        modelopath = []
         modelopath = self.openDialogBox()
+        cv1 = cargar_modelo(modelopath[0])
+        modelo = cargar_modelo(modelopath[1])
+
+        X_testcv = tfid_fit(processed_text_testeo, cv1)
+        for i in X_testcv:
+            pred = prediccion(modelo, i)
+            print("\n", pred)
+
         self.testBtn.setEnabled(True)
 
 
@@ -155,6 +161,7 @@ class initial(QDialog):
 
         #Modelos
         naive = naive_bayes(X_train, Y_train)
+        print(naive)
         print("####################### Test Score ##############################\n")
         test_score(naive, X_train, Y_train)
 
@@ -187,6 +194,9 @@ class initial(QDialog):
         # dd/mm/YY H:M:S
         dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
         guardar_modelo('modelos/naive_' + dt_string, naive)
+
+        with open('modelos/naive_' + dt_string + '.pk', 'wb') as f:
+            pickle.dump(cv, f)
 
     def entrenamientoArbolDecision(self):
         # Proceso TFIDF
@@ -227,6 +237,9 @@ class initial(QDialog):
         dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
         print("date and time =", dt_string)    
         guardar_modelo('modelos/tree_' + dt_string, tree)
+
+        with open('modelos/tree_' + dt_string + '.pk', 'wb') as f:
+            pickle.dump(cv, f)
 
     def entrenamientoKnn(self):
         # Proceso TFIDF
@@ -269,6 +282,9 @@ class initial(QDialog):
         dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
         print("date and time =", dt_string)    
         guardar_modelo('modelos/knn_' + dt_string, modknn)
+
+        with open('modelos/knn_' + dt_string + '.pk', 'wb') as f:
+            pickle.dump(cv, f)
 
     def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
