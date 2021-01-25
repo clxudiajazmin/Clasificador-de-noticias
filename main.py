@@ -1,5 +1,14 @@
-import sys
+"""
+Proyecto Computacion I
+======================
++ Grupo 1: Patricia Colmenares Carretero, Sofia Martinez Parada, Claudia Jazmin Soria Saavedra y Diego Vazquez Pares
++ Aplicacion para entrenamiento y testeo empleando validacion cruzada sobre archivos de texto con el fin de entrenar 
+un modelo predictivo capaz de clasificar en funcion a dos categorias.
++ Se han utilizado los algoritmos de KNN, Naive-Bayes y Decision Tree.
+"""
 
+# librerias importadas
+import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QProgressBar, QMainWindow
 from PyQt5.Qt import QTableWidgetItem, Qt
@@ -16,6 +25,7 @@ import pandas as pd
 from openpyxl import Workbook
 import xlrd
 
+# variables globales
 noticias = []
 despoblacion = []
 desp = []
@@ -29,14 +39,14 @@ nuevas = []
 cv = TfidfVectorizer()
 vectorizer = CountVectorizer()
 
-#inicializar UI
+# inicializar UI
 class initial(QDialog):
     def __init__(self):
         super(initial,self).__init__()
         loadUi("main.ui", self)
-        #definir elementos de la UI y acciones/funciones asociadas
+        # definir elementos de la UI y acciones/funciones asociadas
 
-        #creamos sets para mostrar resultados en el barchart
+        # creamos sets para mostrar resultados en el barchart
 
         self.setRecall = QBarSet("Recalls")
         self.setRecall.append([0,0,0])
@@ -45,99 +55,106 @@ class initial(QDialog):
 
         self.series = QBarSeries()
         
-        #Elementos Tab Entrenamiento:
-        #===========================
+        # Elementos Tab Entrenamiento:
+        # ===========================
 
-        #Btn Insertar primeros datos entrenamiento
+        # Btn Insertar primeros datos entrenamiento
         self.trainingAddFilesBtn.clicked.connect(self.insertarNoticiasEntrenamientoDespoblacion)
 
-        #Btn Insertar segundos datos entrenamiento
+        # Btn Insertar segundos datos entrenamiento
         self.trainingAddFilesBtn2.clicked.connect(self.insertarNoticiasEntrenamientoNoDespoblacion)
 
-        #Btn Preprocesamiento de texto
+        # Btn Preprocesamiento de texto
         self.procesarTextoBtn.clicked.connect(self.procesarTextoEntrenamiento)
 
 
-        #ComboBox selector de Modelo a entrenar
-        #self.chooseModelComboBox.activated.connect(self.elegirModeloEntrenamiento)
+        # ComboBox selector de Modelo a entrenar
+        # self.chooseModelComboBox.activated.connect(self.elegirModeloEntrenamiento)
 
-        #añadir elementos al comboBox y sus valores asociados
+        # añadir elementos al comboBox y sus valores asociados
         self.chooseModelComboBox.addItem("KNN",1)
         self.chooseModelComboBox.addItem("Naive Bayes",2)
         self.chooseModelComboBox.addItem("Decision Tree",3)
 
-        #Btn para entrenar el modelo seleccionado
+        # Btn para entrenar el modelo seleccionado
         self.trainModelBtn.clicked.connect(self.entrenarModelo)
 
-        #Elementos Tab Testeo:
-        #====================
+        # Elementos Tab Testeo:
+        # ====================
 
-        #Btn Insertar Datos Testeo
+        # Btn Insertar Datos Testeo
         self.testingFilesBtn.clicked.connect(self.insertarNoticiasTesteo)
 
-        #Btn Seleccionar Modelo
+        # Btn Seleccionar Modelo
         self.selectTestModelBtn.clicked.connect(self.elegirModeloTesteo)
 
-        #Btn Ejecutar Testeo
-        self.testBtn.clicked.connect(self.ejecutarTesteo)
+        # Btn Mostrar Resultados
+        self.testBtn.clicked.connect(self.mostrarResultados)
 
-        #Elementos Tab
-        #===================
+        # Elementos Tab
+        # ===================
         self.nombreresultadoexcel = ':)'
 
-    #funciones
-    #=========
+    # funciones
+    # =========
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamientoDespoblacion(self):
         desp.append(self.openDialogBox())
+        
+        # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
         
         #cambiar self.procesarTextoBtn a habilitado
         self.trainingAddFilesBtn2.setEnabled(True)
 
+    # abrir dialog window para seleccionar los segundos datos de entrenamiento
     def insertarNoticiasEntrenamientoNoDespoblacion(self):
         no_despoblacion.append(self.openDialogBox())
+
+        # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
-        
 
         #cambiar self.procesarTextoBtn a habilitado
         self.procesarTextoBtn.setEnabled(True)
-
+    
+    # aplicar preprocesamiento de texto
     def procesarTextoEntrenamiento(self):
-        ingresar_noticias(desp[0], noticias)
-        ingresar_noticias(no_despoblacion[0], noticias)
 
-
-        ingresar_noticias(desp[0], despoblacion)
-
-        #cambiar texto en self.stepTipsField
+        # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’)")
 
-        #Procesamiento de texto
+        # bucle inserción de noticias mediante open
+        ingresar_noticias(desp[0], noticias)
+        ingresar_noticias(no_despoblacion[0], noticias)
+        ingresar_noticias(desp[0], despoblacion)
+
+        # Procesamiento de texto
         texto_procesado(processed_text_entrenamiento, noticias)
 
-        #Creación de arreglo de clases
+        # Creación de arreglo de clases
         crea_clases(clases, processed_text_entrenamiento, despoblacion)
-        #print(clases[len(despoblacion)+10])
 
-        #cambiar self.trainModelBtn a habilitado
+        # cambiar self.trainModelBtn a habilitado
         self.trainModelBtn.setEnabled(True)
         
+        # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’).\n====================\nEl preprocesamiento ha acabado")
+        
+        # cambiar self.procesarTextoBtn a deshabilitado
         self.procesarTextoBtn.setEnabled(False)
 
+    # abrir ventana seleccion archivos
     def openDialogBox(self):
         filenames = QFileDialog.getOpenFileNames()
         return filenames[0]
 
-    def ejecutarTesteo(self):
-        '''
-        modelo = cargar_modelo(modelopath)
-        X_testcv = tfid_fit(processed_text_testeo, cv)
-        pred_tree = prediccion(modelo, X_testcv[0])
-        print("\n según Decision Tree es de ", pred_tree)
-        '''
+    # mostrar resultados testeo en nueva tabla
+    def mostrarResultados(self):
+        
+        # para ocupar toda la tabla
         self.tableWidgetshowTest.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
+        
+        # resetear tabla
         self.tableWidgetshowTest.setRowCount(0)
         nombre = self.nombreresultadoexcel
 
@@ -149,9 +166,11 @@ class initial(QDialog):
             for y in range(2):
                 print ('x: ' +df.cell_value(x,y-1))
                 item = QTableWidgetItem()
-                item.setText(df.cell_value(x,y-1))
+                nombreArchivo=df.cell_value(x,y-1).split("/")
+                item.setText(nombreArchivo[len(nombreArchivo)-1])
                 self.tableWidgetshowTest.setItem(x-1, y-1, item)
 
+    # 
     def insertarNoticiasTesteo(self):
         filepaths = self.openDialogBox()
         #ingresar noticias
@@ -163,6 +182,7 @@ class initial(QDialog):
         self.selectTestModelBtn.setEnabled(True)
         self.testingFilesBtn.setEnabled(False)
 
+    #
     def elegirModeloTesteo(self):
         modelopath = self.openDialogBox()
         cv1 = cargar_modelo(modelopath[0])
@@ -185,6 +205,7 @@ class initial(QDialog):
         df.to_excel(nombre + ".xlsx", "Sheet1")
         self.testBtn.setEnabled(True)
 
+    #
     def entrenamientoNaiveBayes(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -230,6 +251,7 @@ class initial(QDialog):
         with open('modelos/naive_' + dt_string + '.pk', 'wb') as f:
             pickle.dump(cv, f)
 
+    #
     def entrenamientoArbolDecision(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -275,6 +297,7 @@ class initial(QDialog):
         with open('modelos/tree_' + dt_string + '.pk', 'wb') as f:
             pickle.dump(cv, f)
 
+    #
     def entrenamientoKnn(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -321,6 +344,7 @@ class initial(QDialog):
         with open('modelos/knn_' + dt_string + '.pk', 'wb') as f:
             pickle.dump(cv, f)
 
+    #
     def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
         self.stepTipsField.setPlainText(" Entrenando el modelo seleccionado")
@@ -338,11 +362,12 @@ class initial(QDialog):
         if modelSelect == 3:
             self.entrenamientoArbolDecision()
 
+    # add resultados entrenamiento y actualizar barchart
     def appendResults(self):
         #clear de series
         self.series = QBarSeries()
-        #add series de todos los modelos procesados
 
+        #add series de todos los modelos procesados
         self.series.append(self.setAccurracy)
         self.series.append(self.setRecall)
 
@@ -354,14 +379,10 @@ class initial(QDialog):
 
         modelosEjeX = ('KNN', 'Naive Bayes', 'Decision Trees')
 
-        #poner linea transparente por si las flais
-
         ejeX = QBarCategoryAxis()
         ejeX.append(modelosEjeX)
 
         ejeY = QValueAxis()
-        
-        #ejeY.setRange(0,series.)
 
         chart.addAxis(ejeX,Qt.AlignBottom)
         chart.addAxis(ejeY,Qt.AlignLeft)
@@ -372,8 +393,6 @@ class initial(QDialog):
         self.QChartView = QChartView(chart)
         self.QChartView.resize(600,600)
         self.QChartView.show()
-
-        #intentar meter el chartView dentro de la tab existente de entrenamiento
 
 
 #inicializar app
