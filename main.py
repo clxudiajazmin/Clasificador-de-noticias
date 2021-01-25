@@ -91,12 +91,19 @@ class initial(QDialog):
         # Btn Mostrar Resultados
         self.testBtn.clicked.connect(self.mostrarResultados)
 
-        # Elementos Tab
-        # ===================
+        # Tab Testeo
+        #self.tabTest.clicked.connect(self.abrirTabTesteo)
+        
+        # nombre excel
         self.nombreresultadoexcel = ':)'
 
     # funciones
     # =========
+
+    # abrir tab testeo
+    def abrirTabTesteo(self):
+        self.stepTipsField.setPlainText("En esta pestaña puede realizar el testeo sobre un nuevo set de datos para un modelo ya existente.")
+
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamientoDespoblacion(self):
         # abrir ventana seleccion archivos
@@ -173,7 +180,7 @@ class initial(QDialog):
                 item.setText(nombreArchivo[len(nombreArchivo)-1])
                 self.tableWidgetshowTest.setItem(x-1, y-1, item)
 
-    # 
+    # insertar archivos fase testeo
     def insertarNoticiasTesteo(self):
         # abrir ventana seleccion archivos
         filepaths = self.openDialogBox()
@@ -183,34 +190,46 @@ class initial(QDialog):
 
         #Procesamiento de texto
         texto_procesado(processed_text_testeo, nuevas)
+
         # cambiar self.selectTestModelBtn a deshabilitado
         self.selectTestModelBtn.setEnabled(True)
+
+        # cambiar self.testingFilesBtn a habilitado
         self.testingFilesBtn.setEnabled(False)
 
-    #
+    # seleccionar modelo fase testeo
     def elegirModeloTesteo(self):
+        # abrir ventana seleccion archivos
         modelopath = self.openDialogBox()
-        cv1 = cargar_modelo(modelopath[0])
-        modelo = cargar_modelo(modelopath[1])
 
+        # cargar diccionario
+        cv1 = cargar_modelo(modelopath[0])
+        
+        # cargar modelo
+        modelo = cargar_modelo(modelopath[1])
+        
+        # aplicar tfidf
         X_testcv = tfid_fit(processed_text_testeo, cv1)
 
+        # insertar predicciones
         predicciones = []
-
-
         for i in X_testcv:
             predicciones.append(prediccion(modelo, i))
 
+        # crear dataframe
         df = pd.DataFrame(data = predicciones, index = nuevas)
-        print(df)
+        
+        # nombrar archivo y exportar a excel
         archivo = modelopath[0]
         new_archivo = archivo.replace('modelos', 'resultados')
         nombre = new_archivo[:len(new_archivo)-3]
         self.nombreresultadoexcel = nombre
         df.to_excel(nombre + ".xlsx", "Sheet1")
+
+        # cambiar self.testBtn a habilitado
         self.testBtn.setEnabled(True)
 
-    #
+    # aplicar modelo NaiveBayes entrenamiento
     def entrenamientoNaiveBayes(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -230,20 +249,18 @@ class initial(QDialog):
         print("###################### Accuracy ###############################\n")
         accuracy(Y_true_naive, Y_pred_naive)
 
-        #incluir nueva accurracy al set de resultados de NaiveBayes
-        #self.setNBayes.append(accuracy_score(Y_true_naive, Y_pred_naive) * 100)
-        #self.setAccurracy[1]=accuracy_score(Y_true_naive, Y_pred_naive) * 100
-        #self.a[1]=accuracy_score(Y_true_naive, Y_pred_naive) * 100
-        
         self.setAccurracy.replace(1,accuracy_score(Y_true_naive, Y_pred_naive)*100)
-        #llamar a funcion para actualizar los valores del Barchart
+       
         
         print("####################### Recall ##############################\n")
         print(recall_score(Y_true_naive, Y_pred_naive, average='macro'))
         self.setRecall.replace(1,recall_score(Y_true_naive, Y_pred_naive, average='macro')*100)
-        a= "Modelo Naive-Bayes\n==================\nRecall:" + str(recall_score(Y_true_naive, Y_pred_naive, average='macro')) + "\nPrecision: " + str(accuracy_score(Y_true_naive, Y_pred_naive))
+
+        a= "Modelo Naive-Bayes\n==================\nRecall:" + str(recall_score(Y_true_naive, Y_pred_naive, average='macro')) + "\nAccuracy: " + str(accuracy_score(Y_true_naive, Y_pred_naive))
         self.stepTipsField.setPlainText(a)
+         #llamar a funcion para actualizar los valores del Barchart
         self.appendResults()
+
         print("\n###################### Matriz de confusion ###############################\n")
         matrizconf(Y_true_naive, Y_pred_naive)
 
@@ -252,11 +269,10 @@ class initial(QDialog):
         # dd/mm/YY H:M:S
         dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
         guardar_modelo('modelos/naive_' + dt_string, naive)
-
         with open('modelos/naive_' + dt_string + '.pk', 'wb') as f:
             pickle.dump(cv, f)
 
-    #
+    # aplicar modelo Decision Tree entrenamiento
     def entrenamientoArbolDecision(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -285,7 +301,7 @@ class initial(QDialog):
         print(recall_score(Y_true_tree,Y_pred_tree, average='macro'))
         #self.setDTrees.append(recall_score(Y_true_tree, Y_pred_tree, average='macro')*100)
         self.setRecall.replace(2,recall_score(Y_true_tree, Y_pred_tree, average='macro')*100)
-        a= "Modelo Arbol Decision\n=====================\nRecall:" + str(recall_score(Y_true_tree, Y_pred_tree, average='macro')) + "\nPrecision: " + str(accuracy_score(Y_true_tree, Y_pred_tree))
+        a= "Modelo Arbol Decision\n=====================\nRecall:" + str(recall_score(Y_true_tree, Y_pred_tree, average='macro')) + "\nAccuracy: " + str(accuracy_score(Y_true_tree, Y_pred_tree))
         self.stepTipsField.setPlainText(a)
         self.appendResults()
         #Matriz confusion
@@ -295,14 +311,12 @@ class initial(QDialog):
 
         now = datetime.now()
         # dd/mm/YY H:M:S
-        dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
-        print("date and time =", dt_string)    
+        dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")    
         guardar_modelo('modelos/tree_' + dt_string, tree)
-
         with open('modelos/tree_' + dt_string + '.pk', 'wb') as f:
             pickle.dump(cv, f)
 
-    #
+    # aplicar modelo KNN
     def entrenamientoKnn(self):
         # Proceso TFIDF
         X_traincv = cv.fit_transform(processed_text_entrenamiento)
@@ -332,7 +346,7 @@ class initial(QDialog):
         
         #self.setDTrees.append(recall_score(Y_true_knn, Y_pred_knn, average='macro')*100)
         self.setRecall.replace(0,recall_score(Y_true_knn, Y_pred_knn, average='macro')*100)
-        a= "Modelo KNN\n===============\nRecall:" + str(recall_score(Y_true_knn, Y_pred_knn, average='macro')) + "\nPrecision: " + str(accuracy_score(Y_true_knn, Y_pred_knn))
+        a= "Modelo KNN\n===============\nRecall:" + str(recall_score(Y_true_knn, Y_pred_knn, average='macro')) + "\nAccuracy: " + str(accuracy_score(Y_true_knn, Y_pred_knn))
         self.stepTipsField.setPlainText(a)
         self.appendResults()
         #Matriz confusion
@@ -343,20 +357,18 @@ class initial(QDialog):
         now = datetime.now()
         # dd/mm/YY H:M:S
         dt_string = now.strftime("dia_%d-%m-%Y,hora_%H-%M-%S")
-        print("date and time =", dt_string)    
         guardar_modelo('modelos/knn_' + dt_string, modknn)
-
         with open('modelos/knn_' + dt_string + '.pk', 'wb') as f:
             pickle.dump(cv, f)
 
-    #
+    # comprobar modelo seleccionado en comboBox
     def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
         self.stepTipsField.setPlainText(" Entrenando el modelo seleccionado")
         
         #tomar valor actual del comboBox
         modelSelect = self.chooseModelComboBox.currentData()
-        print( "opcion seleccionada:",modelSelect)
+        
         #no existe switch en python (o.o)
         if modelSelect == 1:
             self.entrenamientoKnn()
@@ -372,29 +384,35 @@ class initial(QDialog):
         #clear de series
         self.series = QBarSeries()
 
-        #add series de todos los modelos procesados
+        #add sets de Accurracy y Recall de todos los modelos procesados a series
         self.series.append(self.setAccurracy)
         self.series.append(self.setRecall)
 
+        # crear nuevo Chart
         chart = QChart()
         
+        # add series al nuevo Chart
         chart.addSeries(self.series)
         chart.setTitle("Precisiones de Modelos")
         chart.setAnimationOptions(QChart.SeriesAnimations)
 
+        # parametro QChart
         modelosEjeX = ('KNN', 'Naive Bayes', 'Decision Trees')
 
+        # parametros ejeX
         ejeX = QBarCategoryAxis()
         ejeX.append(modelosEjeX)
 
+        # parametros ejeY
         ejeY = QValueAxis()
-
         chart.addAxis(ejeX,Qt.AlignBottom)
         chart.addAxis(ejeY,Qt.AlignLeft)
         
+        # leyenda Barchart
         chart.legend().setVisible(True)
         chart.legend().setAlignment(Qt.AlignBottom)
 
+        # Mostrar ventana Barchart
         self.QChartView = QChartView(chart)
         self.QChartView.resize(600,600)
         self.QChartView.show()

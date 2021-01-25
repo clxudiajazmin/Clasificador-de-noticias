@@ -1,3 +1,12 @@
+"""
+Proyecto Computacion I
+======================
++ Grupo 1: Patricia Colmenares Carretero, Sofia Martinez Parada, Claudia Jazmin Soria Saavedra y Diego Vazquez Pares
++ Aplicacion para entrenamiento y testeo empleando validacion cruzada sobre archivos de texto con el fin de entrenar 
+un modelo predictivo capaz de clasificar en funcion a dos categorias.
++ Se han utilizado los algoritmos de KNN, Naive-Bayes y Decision Tree.
+"""
+
 #Librerías
 import glob
 import numpy as np
@@ -76,12 +85,9 @@ def stemming(data):
 def preprocess(data):
     data = convert_lower_case(data)
     data = remove_apostrophe(data)
-    data = remove_stop_words(data)
-    data = stemming(data)
-    data = remove_punctuation(data)
-    data = stemming(data)
     data = remove_punctuation(data)
     data = remove_stop_words(data)
+    data = stemming(data)
     return data
 
 #Texto procesado
@@ -91,16 +97,12 @@ def texto_procesado(processed_text, noticias):
         texto = archivo.read().strip()
         archivo.close()
         processed_text.append(preprocess(texto))
-
-    print('Cantidad de texto procesado: ', len(processed_text))
     
     return processed_text
 
 
 #Creación de clases
-
 def crea_clases(clases, processed_text, despoblacion):
-    print("Creo clases")
     for i in range(0, len(despoblacion)):
         clases.append("Despoblacion")  # Despoblacion
 
@@ -113,10 +115,13 @@ def crea_clases(clases, processed_text, despoblacion):
     return clases
 
 #Proceso TFIDF
+
+# entrenamiento
 def tfid(processed_text, cv):
     X_traincv = cv.fit_transform(processed_text)
     return X_traincv
 
+# testeo
 def tfid_fit(processed_text, cv):
     X_traincv = cv.transform(processed_text)
     return X_traincv
@@ -167,10 +172,8 @@ def guardar_modelo(direccion, modelo):
     with open(direccion+'.pk1', 'wb') as f:
         pickle.dump(modelo, f)
 
+#Cargar modelo
 def cargar_modelo(direccion):
     with open(direccion, 'rb') as f:
         modelo = pickle.load(f)
     return modelo
-
-
-
