@@ -106,29 +106,29 @@ class initial(QDialog):
 
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamientoDespoblacion(self):
-        # abrir ventana seleccion archivos
-        desp.append(self.openDialogBox())
         
         # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
-        
+
+        # abrir ventana seleccion archivos
+        desp.append(self.openDialogBox())
+                
         #cambiar self.procesarTextoBtn a habilitado
         self.trainingAddFilesBtn2.setEnabled(True)
 
     # abrir dialog window para seleccionar los segundos datos de entrenamiento
     def insertarNoticiasEntrenamientoNoDespoblacion(self):
-        # abrir ventana seleccion archivos
-        no_despoblacion.append(self.openDialogBox())
-
         # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
+        
+        # abrir ventana seleccion archivos
+        no_despoblacion.append(self.openDialogBox())
 
         #cambiar self.procesarTextoBtn a habilitado
         self.procesarTextoBtn.setEnabled(True)
     
     # aplicar preprocesamiento de texto
     def procesarTextoEntrenamiento(self):
-
         # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’)")
 
@@ -159,7 +159,9 @@ class initial(QDialog):
 
     # mostrar resultados testeo en nueva tabla
     def mostrarResultados(self):
-        
+        # cambiar texto campo descripcion
+        self.stepTipsField.setPlainText("A continuación se muestra una tabla con los resultados de la clasificación realizada por el modelo seleccionado.")
+
         # para ocupar toda la tabla
         self.tableWidgetshowTest.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
         
@@ -182,6 +184,9 @@ class initial(QDialog):
 
     # insertar archivos fase testeo
     def insertarNoticiasTesteo(self):
+        # cambiar texto campo descripcion
+        self.stepTipsField.setPlainText("Seleccione los archivos que utilizará durante la fase de testeo.")
+        
         # abrir ventana seleccion archivos
         filepaths = self.openDialogBox()
 
@@ -199,6 +204,9 @@ class initial(QDialog):
 
     # seleccionar modelo fase testeo
     def elegirModeloTesteo(self):
+        # cambiar texto campo descripcion
+        self.stepTipsField.setPlainText("Seleccione el diccionario .pk y modelo correspondiente .pk1.")
+
         # abrir ventana seleccion archivos
         modelopath = self.openDialogBox()
 
@@ -228,6 +236,9 @@ class initial(QDialog):
 
         # cambiar self.testBtn a habilitado
         self.testBtn.setEnabled(True)
+
+        # cambiar texto campo descripcion
+        self.stepTipsField.setPlainText("Resultados exportados a la carpeta resultados en formato Excel.")
 
     # aplicar modelo NaiveBayes entrenamiento
     def entrenamientoNaiveBayes(self):
@@ -364,7 +375,7 @@ class initial(QDialog):
     # comprobar modelo seleccionado en comboBox
     def entrenarModelo(self):
         #cambiar texto en self.stepTipsField
-        self.stepTipsField.setPlainText(" Entrenando el modelo seleccionado")
+        self.stepTipsField.setPlainText("Entrenando el modelo seleccionado...")
         
         #tomar valor actual del comboBox
         modelSelect = self.chooseModelComboBox.currentData()
@@ -379,6 +390,9 @@ class initial(QDialog):
         if modelSelect == 3:
             self.entrenamientoArbolDecision()
 
+        # cambiar texto campo descripcion
+        self.stepTipsField.setPlainText("Entrenamiento finalizado.")
+        
     # add resultados entrenamiento y actualizar barchart
     def appendResults(self):
         #clear de series
