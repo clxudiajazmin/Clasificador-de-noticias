@@ -99,6 +99,7 @@ class initial(QDialog):
     # =========
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamientoDespoblacion(self):
+        # abrir ventana seleccion archivos
         desp.append(self.openDialogBox())
         
         # cambiar texto campo descripcion
@@ -109,6 +110,7 @@ class initial(QDialog):
 
     # abrir dialog window para seleccionar los segundos datos de entrenamiento
     def insertarNoticiasEntrenamientoNoDespoblacion(self):
+        # abrir ventana seleccion archivos
         no_despoblacion.append(self.openDialogBox())
 
         # cambiar texto campo descripcion
@@ -173,13 +175,15 @@ class initial(QDialog):
 
     # 
     def insertarNoticiasTesteo(self):
+        # abrir ventana seleccion archivos
         filepaths = self.openDialogBox()
+
         #ingresar noticias
         ingresar_noticias(filepaths, nuevas)
 
         #Procesamiento de texto
         texto_procesado(processed_text_testeo, nuevas)
-
+        # cambiar self.selectTestModelBtn a deshabilitado
         self.selectTestModelBtn.setEnabled(True)
         self.testingFilesBtn.setEnabled(False)
 
