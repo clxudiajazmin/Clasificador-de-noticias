@@ -390,9 +390,6 @@ class initial(QDialog):
         if modelSelect == 3:
             self.entrenamientoArbolDecision()
 
-        # cambiar texto campo descripcion
-        self.stepTipsField.setPlainText("Entrenamiento finalizado.")
-        
     # add resultados entrenamiento y actualizar barchart
     def appendResults(self):
         #clear de series
