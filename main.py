@@ -44,7 +44,8 @@ class initial(QDialog):
         self.setAccurracy.append([0,0,0])
 
         self.series = QBarSeries()
-        #Elementos Tab Entrenamiento
+        
+        #Elementos Tab Entrenamiento:
         #===========================
 
         #Btn Insertar primeros datos entrenamiento
@@ -68,7 +69,7 @@ class initial(QDialog):
         #Btn para entrenar el modelo seleccionado
         self.trainModelBtn.clicked.connect(self.entrenarModelo)
 
-        #Elementos Tab Testeo
+        #Elementos Tab Testeo:
         #====================
 
         #Btn Insertar Datos Testeo
@@ -79,6 +80,7 @@ class initial(QDialog):
 
         #Btn Ejecutar Testeo
         self.testBtn.clicked.connect(self.ejecutarTesteo)
+
         #Elementos Tab
         #===================
         self.nombreresultadoexcel = ':)'
@@ -124,7 +126,6 @@ class initial(QDialog):
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’).\n====================\nEl preprocesamiento ha acabado")
         self.procesarTextoBtn.setEnabled(False)
 
-
     def openDialogBox(self):
         filenames = QFileDialog.getOpenFileNames()
         return filenames[0]
@@ -137,6 +138,7 @@ class initial(QDialog):
         print("\n según Decision Tree es de ", pred_tree)
         '''
         self.tableWidgetshowTest.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
+        self.tableWidgetshowTest.setRowCount(0)
         nombre = self.nombreresultadoexcel
 
         documento = xlrd.open_workbook(nombre+ '.xlsx')
@@ -149,10 +151,6 @@ class initial(QDialog):
                 item = QTableWidgetItem()
                 item.setText(df.cell_value(x,y-1))
                 self.tableWidgetshowTest.setItem(x-1, y-1, item)
-
-    #def elegirModeloEntrenamiento(self,index):
-        #tomar valor actual del comboBox
-     #   modelSelect = self.chooseModelComboBox.itemData(index)
 
     def insertarNoticiasTesteo(self):
         filepaths = self.openDialogBox()
@@ -183,7 +181,6 @@ class initial(QDialog):
         self.nombreresultadoexcel = nombre
         df.to_excel(nombre + ".xlsx", "Sheet1")
         self.testBtn.setEnabled(True)
-
 
     def entrenamientoNaiveBayes(self):
         # Proceso TFIDF
