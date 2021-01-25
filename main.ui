@@ -359,8 +359,14 @@ border:black
              <string>Entrenamiento</string>
             </attribute>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
-             <item>
+             <item alignment="Qt::AlignHCenter">
               <widget class="QFrame" name="frame_5">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -370,6 +376,18 @@ border:black
                <layout class="QVBoxLayout" name="verticalLayout_2">
                 <item>
                  <widget class="QPushButton" name="trainingAddFilesBtn">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Insertar primeros datos entrenamiento</string>
                   </property>
@@ -380,6 +398,18 @@ border:black
                   <property name="enabled">
                    <bool>false</bool>
                   </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Insertar segundos datos entrenamiento</string>
                   </property>
@@ -389,6 +419,18 @@ border:black
                  <widget class="QPushButton" name="procesarTextoBtn">
                   <property name="enabled">
                    <bool>false</bool>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
                   </property>
                   <property name="text">
                    <string>Preprocesamiento de texto</string>
@@ -403,7 +445,13 @@ border:black
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>30</height>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                  </widget>
@@ -412,6 +460,18 @@ border:black
                  <widget class="QPushButton" name="trainModelBtn">
                   <property name="enabled">
                    <bool>false</bool>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
                   </property>
                   <property name="text">
                    <string>Entrenar Modelo</string>
@@ -454,10 +514,19 @@ border:black
                   <property name="text">
                    <string>Insertar Datos Testeo</string>
                   </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QPushButton" name="selectTestModelBtn">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -540,7 +609,7 @@ border:black
             <bool>false</bool>
            </property>
            <property name="plainText">
-            <string notr="true">Bienvendio, aquí podrá encontrar descripciones de cada de los pasos del proceso.
+            <string notr="true">Bienvenido, aquí podrá encontrar descripciones de cada uno de los pasos del proceso.
 </string>
            </property>
            <property name="centerOnScroll">

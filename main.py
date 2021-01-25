@@ -160,6 +160,9 @@ class initial(QDialog):
         #Procesamiento de texto
         texto_procesado(processed_text_testeo, nuevas)
 
+        self.selectTestModelBtn.setEnabled(True)
+        self.testingFilesBtn.setEnabled(False)
+
     def elegirModeloTesteo(self):
         modelopath = self.openDialogBox()
         cv1 = cargar_modelo(modelopath[0])
