@@ -158,6 +158,7 @@ class initial(QDialog):
         self.tableWidgetshowTest.setRowCount(0)
         nombre = self.nombreresultadoexcel
 
+        # mostrar contenido xlsx
         documento = xlrd.open_workbook(nombre+ '.xlsx')
         df = documento.sheet_by_index(0)
         self.tableWidgetshowTest.setRowCount(df.nrows)
