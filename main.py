@@ -2,6 +2,7 @@ import sys
 
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QProgressBar, QMainWindow
+from PyQt5.Qt import QTableWidgetItem, Qt
 from PyQt5.uic import loadUi
 from PyQt5.QtChart import QChart, QChartView, QValueAxis, QBarCategoryAxis, QBarSet, QBarSeries
 from PyQt5.Qt import Qt
@@ -13,6 +14,7 @@ from datetime import datetime
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
 from openpyxl import Workbook
+import xlrd
 
 noticias = []
 despoblacion = []
@@ -77,6 +79,9 @@ class initial(QDialog):
 
         #Btn Ejecutar Testeo
         self.testBtn.clicked.connect(self.ejecutarTesteo)
+        #Elementos Tab
+        #===================
+        self.nombreresultadoexcel = ':)'
 
     #funciones
     #=========
@@ -131,6 +136,19 @@ class initial(QDialog):
         pred_tree = prediccion(modelo, X_testcv[0])
         print("\n según Decision Tree es de ", pred_tree)
         '''
+        self.tableWidgetshowTest.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
+        nombre = self.nombreresultadoexcel
+
+        documento = xlrd.open_workbook(nombre+ '.xlsx')
+        df = documento.sheet_by_index(0)
+        self.tableWidgetshowTest.setRowCount(df.nrows)
+        self.tableWidgetshowTest.setColumnCount(2)
+        for x in range(1,df.nrows):
+            for y in range(2):
+                print ('x: ' +df.cell_value(x,y-1))
+                item = QTableWidgetItem()
+                item.setText(df.cell_value(x,y-1))
+                self.tableWidgetshowTest.setItem(x-1, y-1, item)
 
     #def elegirModeloEntrenamiento(self,index):
         #tomar valor actual del comboBox
@@ -162,6 +180,7 @@ class initial(QDialog):
         archivo = modelopath[0]
         new_archivo = archivo.replace('modelos', 'resultados')
         nombre = new_archivo[:len(new_archivo)-3]
+        self.nombreresultadoexcel = nombre
         df.to_excel(nombre + ".xlsx", "Sheet1")
         self.testBtn.setEnabled(True)
 
