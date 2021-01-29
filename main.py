@@ -208,7 +208,7 @@ class initial(QDialog):
         self.selectTestModelBtn.setEnabled(True)
 
         # cambiar self.testingFilesBtn a habilitado
-        self.testingFilesBtn.setEnabled(False)
+        # self.testingFilesBtn.setEnabled(False)
 
     # seleccionar modelo fase testeo
     def elegirModeloTesteo(self):
@@ -217,36 +217,37 @@ class initial(QDialog):
 
         # abrir ventana seleccion archivos
         modelopath = self.openDialogBox()
-
-        # cargar diccionario
-        cv1 = cargar_modelo(modelopath[0])
         
-        # cargar modelo
-        modelo = cargar_modelo(modelopath[1])
-        
-        # aplicar tfidf
-        X_testcv = tfid_fit(processed_text_testeo, cv1)
+        if (len(modelopath)>3):
+            # cargar diccionario
+            cv1 = cargar_modelo(modelopath[0])
+            
+            # cargar modelo
+            modelo = cargar_modelo(modelopath[1])
+            
+            # aplicar tfidf
+            X_testcv = tfid_fit(processed_text_testeo, cv1)
 
-        # insertar predicciones
-        predicciones = []
-        for i in X_testcv:
-            predicciones.append(prediccion(modelo, i))
+            # insertar predicciones
+            predicciones = []
+            for i in X_testcv:
+                predicciones.append(prediccion(modelo, i))
 
-        # crear dataframe
-        df = pd.DataFrame(data = predicciones, index = nuevas)
-        
-        # nombrar archivo y exportar a excel
-        archivo = modelopath[0]
-        new_archivo = archivo.replace('modelos', 'resultados')
-        nombre = new_archivo[:len(new_archivo)-3]
-        self.nombreresultadoexcel = nombre
-        df.to_excel(nombre + ".xlsx", "Sheet1")
+            # crear dataframe
+            df = pd.DataFrame(data = predicciones, index = nuevas)
+            
+            # nombrar archivo y exportar a excel
+            archivo = modelopath[0]
+            new_archivo = archivo.replace('modelos', 'resultados')
+            nombre = new_archivo[:len(new_archivo)-3]
+            self.nombreresultadoexcel = nombre
+            df.to_excel(nombre + ".xlsx", "Sheet1")
 
-        # cambiar self.testBtn a habilitado
-        self.testBtn.setEnabled(True)
+            # cambiar self.testBtn a habilitado
+            self.testBtn.setEnabled(True)
 
-        # cambiar texto campo descripcion
-        self.stepTipsField.setPlainText("Resultados exportados a la carpeta resultados en formato Excel.")
+            # cambiar texto campo descripcion
+            self.stepTipsField.setPlainText("Resultados exportados a la carpeta resultados en formato Excel.")
 
     # aplicar modelo NaiveBayes entrenamiento
     def entrenamientoNaiveBayes(self):
