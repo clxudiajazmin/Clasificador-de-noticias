@@ -106,18 +106,24 @@ class initial(QDialog):
 
     # abrir dialog window para seleccionar los datos de entrenamiento
     def insertarNoticiasEntrenamientoDespoblacion(self):
-        
+
+        del desp[:]
+        print(desp)
         # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
 
         # abrir ventana seleccion archivos
         desp.append(self.openDialogBox())
-                
+
+        print(desp)
         #cambiar self.procesarTextoBtn a habilitado
         self.trainingAddFilesBtn2.setEnabled(True)
 
     # abrir dialog window para seleccionar los segundos datos de entrenamiento
     def insertarNoticiasEntrenamientoNoDespoblacion(self):
+
+        del no_despoblacion[:]
+
         # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("Seleccionamos los directorios donde tenemos los archivos de texto que utilizaremos para entrenar nuestro modelo.")
         
@@ -132,6 +138,8 @@ class initial(QDialog):
         # cambiar texto campo descripcion
         self.stepTipsField.setPlainText("El preprocesamiento a realizar consta de 4 etapas:\n1. Tokenizar: separar las palabras que componen un texto, obteniendo como resultado una secuencia de tokens.\n2. Normalización: se pasa a minúsculas tdoos los tokens.\n3.Filtrado de stopwords: en esta etapa eliminamos  aquellas palabras con poco valor semántico, denominadas stopwords.\n4.Stemming: extraemos el lexema de los tokens restantes  (un ejemplo sería ‘cas-’ para la palabra ‘casero’)")
 
+        del noticias[:]
+        del clases[:]
         # bucle inserción de noticias mediante open
         ingresar_noticias(desp[0], noticias)
         ingresar_noticias(no_despoblacion[0], noticias)
