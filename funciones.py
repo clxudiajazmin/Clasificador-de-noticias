@@ -100,7 +100,6 @@ def texto_procesado(processed_text, noticias):
     
     return processed_text
 
-
 #Creación de clases
 def crea_clases(clases, processed_text, despoblacion):
     for i in range(0, len(despoblacion)):
@@ -126,7 +125,6 @@ def tfid_fit(processed_text, cv):
     X_traincv = cv.transform(processed_text)
     return X_traincv
 
-
 #Naive Bayes
 def naive_bayes(X_traincv, clases):
     mnb = MultinomialNB()
@@ -139,7 +137,7 @@ def decision_tree(X_traincv,  clases):
     tree.fit(X_traincv, clases)
     return tree
 
-#RandomForest
+#Knn
 def knn(X_traincv, clases):
     knn = KNeighborsClassifier(n_neighbors=3)
     knn.fit(X_traincv, clases)

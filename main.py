@@ -180,7 +180,7 @@ class initial(QDialog):
         # mostrar contenido xlsx
         documento = xlrd.open_workbook(nombre+ '.xlsx')
         df = documento.sheet_by_index(0)
-        self.tableWidgetshowTest.setRowCount(df.nrows)
+        self.tableWidgetshowTest.setRowCount((df.nrows)-1)
         self.tableWidgetshowTest.setColumnCount(2)
         for x in range(1,df.nrows):
             for y in range(2):
@@ -277,7 +277,7 @@ class initial(QDialog):
 
         a= "Modelo Naive-Bayes\n==================\nRecall:" + str(recall_score(Y_true_naive, Y_pred_naive, average='macro')) + "\nAccuracy: " + str(accuracy_score(Y_true_naive, Y_pred_naive))
         self.stepTipsField.setPlainText(a)
-         #llamar a funcion para actualizar los valores del Barchart
+        #llamar a funcion para actualizar los valores del Barchart
         self.appendResults()
 
         print("\n###################### Matriz de confusion ###############################\n")
