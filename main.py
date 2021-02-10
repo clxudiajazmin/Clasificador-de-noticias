@@ -218,7 +218,7 @@ class initial(QDialog):
         # abrir ventana seleccion archivos
         modelopath = self.openDialogBox()
         
-        if (len(modelopath)>3):
+        if (len(modelopath) == 2):
             # cargar diccionario
             cv1 = cargar_modelo(modelopath[0])
             
